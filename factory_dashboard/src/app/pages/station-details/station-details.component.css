@@ -1,17 +1,19 @@
 .page-container {
 	width: 100%;
 	padding: 20px;
-	margin: 0 auto;
 }
 
 .header {
 	display: flex;
-	gap: 10px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px 10px 0;
 }
 
 .table {
 	width: 100%;
 	table-layout: fixed;
+	background-color: #f8f8f8;
 }
 
 .table th, .table td {
