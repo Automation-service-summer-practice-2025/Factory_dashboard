@@ -40,3 +40,34 @@
 .checking-date-col {
 	width: 35%;
 }
+
+/* пагинация */
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+	gap: 8px;
+}
+
+.pagination button {
+  padding: 5px 10px;
+	border: none;
+  background: white;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.pagination span.active {
+  background-color: #d2d0d0;
+	border-radius: 5px;
+}

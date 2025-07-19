@@ -11,7 +11,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./station-details.component.css']
 })
 export class StationDetailsComponent implements OnInit {
-  station: Station | null = null;
+  station!: Station;
+  currentPage = 1;
+  itemsPerPage = 10;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,7 +22,8 @@ export class StationDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const stationId = Number(this.route.snapshot.paramMap.get('station_id'));
-    this.loadStationData(stationId);
+    // this.loadStationData(stationId);
+    this.loadStationMockData(stationId)
   }
 
   loadStationData(stationId: number) {
@@ -62,8 +65,265 @@ export class StationDetailsComponent implements OnInit {
           checking_date_start: "2024-03-20T11:00:00",
           checking_date_finish: "2024-03-25T15:00:00",
           block_key_status: true
-        }
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
+        {
+          element_id: 101,
+          element_name: "Насос H-21",
+          working_status: true,
+          checking_date_start: "2024-01-10T09:00:00",
+          checking_date_finish: "2024-01-15T17:00:00",
+          block_key_status: true
+        },
       ]
     };
+  }
+
+  get totalPages(): number {
+    return Math.ceil(this.station.station_elements.length / this.itemsPerPage);
+  }
+
+  get paginatedItems(): any[] {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    return this.station.station_elements.slice(startIndex, startIndex + this.itemsPerPage);
+  }
+
+  getPages(): number[] {
+    const pages = [];
+    for (let i = 1; i <= this.totalPages; i++) {
+      pages.push(i);
+    }
+    return pages;
+  }
+
+  prevPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+    }
+  }
+
+  goToPage(page: number): void {
+    this.currentPage = page;
+  }
+
+  nextPage(): void {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+    }
   }
 }
