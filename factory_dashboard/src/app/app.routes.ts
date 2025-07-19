@@ -3,7 +3,7 @@ import { StationDetailsComponent } from './pages/station-details/station-details
 
 export const routes: Routes = [
   {
-    path: 'station/:id',
+    path: 'station/:station_id',
     component: StationDetailsComponent
   },
 ];

@@ -12,7 +12,7 @@ export class StationDetailsComponent {
 
   constructor(private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
-      this.stationId = +params['id'];
+      this.stationId = +params['station_id'];
       console.log('Station ID:', this.stationId);
     });
   }
