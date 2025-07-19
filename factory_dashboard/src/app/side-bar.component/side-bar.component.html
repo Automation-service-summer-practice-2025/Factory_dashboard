@@ -1,0 +1,77 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Боковая панель (sidenav) -->
+  <mat-sidenav #sidenav mode="side" opened class="sidenav" fixedInViewport="true">
+    <div class="sidenav-header">
+      <h3>Позиции установки</h3>
+      <mat-form-field appearance="outline" class="search-field">
+        <mat-label>Поиск по номеру</mat-label>
+        <input matInput placeholder="Введите номер" [(ngModel)]="searchTerm" (input)="filterPositions()">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
+    
+    <mat-nav-list>
+      <mat-list-item 
+        *ngFor="let position of filteredPositions" 
+        (click)="selectPosition(position)"
+        [class.active]="position.id === selectedPosition?.id">
+        {{ position.number }}
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Основное содержимое -->
+  <mat-sidenav-content class="content">
+    <!-- Здесь будет основной контент экрана с деталями позиции -->
+    <div *ngIf="selectedPosition" class="position-details">
+      <!-- Заголовок -->
+      <h2>Позиция {{ selectedPosition.number }}</h2>
+      
+      <!-- Основная информация -->
+      <div class="info-section">
+        <h3>Общая информация</h3>
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="info-label">Статус:</span>
+            <span class="info-value">{{ selectedPosition.status }}</span>
+          </div>
+          
+          <div class="info-item">
+            <span class="info-label">Последний контроль:</span>
+            <span class="info-value">{{ selectedPosition.lastMetroControlDate | date:'dd.MM.yyyy' }}</span>
+          </div>
+          
+          <div class="info-item">
+            <span class="info-label">Следующий контроль:</span>
+            <span class="info-value">{{ selectedPosition.nextMetroControlDate | date:'dd.MM.yyyy' }}</span>
+          </div>
+          
+          <div class="info-item">
+            <span class="info-label">Последняя проверка:</span>
+            <span class="info-value">{{ selectedPosition.lastCheckDate | date:'dd.MM.yyyy' }}</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Акты выполненных работ -->
+      <div class="acts-section">
+        <h3>Акты выполненных работ</h3>
+        <div class="acts-list">
+          <button mat-raised-button *ngFor="let act of selectedPosition.acts" class="act-button">
+            Акт от {{ act.date | date }}
+          </button>
+        </div>
+      </div>
+      
+      <!-- Действия -->
+      <div class="actions-section">
+        <button mat-raised-button color="primary" class="action-button">
+          Тех. документация
+        </button>
+        <button mat-raised-button color="primary" class="action-button">
+          Импорт
+        </button>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
