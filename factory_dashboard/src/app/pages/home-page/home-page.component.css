@@ -1,0 +1,16 @@
+.map-container {
+  position: relative;
+  width: 80vw;
+  height: 98vh;
+}
+
+.side-panels {
+  position: fixed;
+  right: 0;
+  top: 0;
+  text-align: right;
+  width: 20vw;
+  height: auto;
+  margin-top: 8px;
+}
+
