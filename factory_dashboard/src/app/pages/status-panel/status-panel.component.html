@@ -1,0 +1,24 @@
+<div class="status-panel" [ngClass]="status">
+  <div class="panel-title">{{ title }}</div>
+  <div class="panel-row">
+    <span>Не квитировано</span>
+    <span class="panel-num highlight">{{ notAck }}</span>
+    <span class="panel-icon">
+      <img src="assets/user.png" alt="user" />
+    </span>
+  </div>
+  <div class="panel-row">
+    <span>Квитировано</span>
+    <span class="panel-num">{{ ack }}</span>
+    <span class="panel-icon">
+      <img src="assets/check.png" alt="check" />
+    </span>
+  </div>
+  <div class="panel-row">
+    <span>Диагностика</span>
+    <span class="panel-num">{{ diag }}</span>
+    <span class="panel-icon">
+      <img src="assets/diag.png" alt="diag" />
+    </span>
+  </div>
+</div>

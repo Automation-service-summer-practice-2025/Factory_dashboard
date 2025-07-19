@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import ImageMap from "image-map";
 import { APIService } from '../../services/api.service';
 import { MapArea, TooltipData, Position } from '../../models/factory.model'
+import { StatusPanelComponent } from '../status-panel/status-panel.component';
 
 @Component({
   selector: 'app-factory-map',
-  imports: [ CommonModule ],
+  imports: [ CommonModule, StatusPanelComponent ],
   templateUrl: './factory-map.html',
   styleUrl: './factory-map.css'
 })
@@ -98,4 +99,35 @@ export class FactoryMap {
       y: event.clientY + offset
     };
   }
+
+    statusBlocks = [
+  {
+    title: 'Загазованность',
+    notAck: 2,
+    ack: 0,
+    diag: 0,
+    status: 'gas'
+  },
+  {
+    title: 'Деблокировочные ключи',
+    notAck: 483,
+    ack: 0,
+    diag: 0,
+    status: 'keys'
+  },
+  {
+    title: 'Пожарная сигнализация',
+    notAck: 2,
+    ack: 0,
+    diag: 0,
+    status: 'fire'
+  },
+  {
+    title: 'Блокировки и сигнализация',
+    notAck: 19,
+    ack: 0,
+    diag: 0,
+    status: 'block'
+  }
+  ];
 }

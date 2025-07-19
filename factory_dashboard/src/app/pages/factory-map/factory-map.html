@@ -29,3 +29,14 @@
     <p>{{ activeTooltip.description }}</p>
   </div>
 </div>
+
+<div class="side-panels">
+  <app-status-panel
+    *ngFor="let block of statusBlocks"
+    [title]="block.title"
+    [notAck]="block.notAck"
+    [ack]="block.ack"
+    [diag]="block.diag"
+    [status]="block.status"
+  ></app-status-panel>
+</div>
