@@ -22,13 +22,6 @@ interface Position {
   y: number;
 }
 
-interface HighlightArea {
-  x: number;
-  y: number;
-  width: number;
-  height: number;
-}
-
 @Component({
   selector: 'app-factory-map',
   imports: [ CommonModule ],
@@ -37,8 +30,6 @@ interface HighlightArea {
 })
 export class FactoryMap {
   @ViewChild('mapImage') mapImage!: ElementRef<HTMLImageElement>;
-
-  constructor(private router: Router) {}
 
   ngAfterViewInit() {
     ImageMap('img[usemap]');
@@ -74,7 +65,6 @@ export class FactoryMap {
 
   activeTooltip: TooltipData | null = null;
   tooltipPosition: Position = { x: 0, y: 0 };
-  highlightedArea: HighlightArea | null = null;
 
   // Обработка наведения на область
   onAreaHover(area: MapArea, event: MouseEvent): void {
@@ -83,24 +73,11 @@ export class FactoryMap {
       description: area.description
     };
     this.updateTooltipPosition(event);
-
-    // Подсветка области (если shape='rect')
-    // if (area.shape === 'rect') {
-    //   const coords = area.coords.split(',').map(Number);
-    //   this.highlightedArea = {
-    //     x: coords[0],
-    //     y: coords[1],
-    //     width: Math.abs(coords[2] - coords[0]),
-    //     height: Math.abs(coords[3] - coords[1])
-    //   };
-    //   console.log("coords: ", coords, "size: ", this.highlightedArea)
-    // }
   }
 
-  // Скрытие тултипа и подсветки
+  // Скрытие тултипа
   onAreaLeave(): void {
     this.activeTooltip = null;
-    this.highlightedArea = null;
   }
 
   // Обновление позиции тултипа
@@ -117,11 +94,4 @@ export class FactoryMap {
       y: event.clientY + offset
     };
   }
-
-  // Обработка клика (можно добавить навигацию)
-  // onAreaClick( area: MapArea, event: MouseEvent): void {
-  //   event.preventDefault();
-  //   // Например, переход по Angular Router:
-  //   this.router.navigateByUrl(area.href);
-  // }
 }
