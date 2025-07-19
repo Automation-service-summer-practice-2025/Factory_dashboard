@@ -13,4 +13,8 @@ export class APIService {
   getStationById(station_id: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/stations/${station_id}`);
   }
+
+  getStations(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/stations`);
+  }
 }
