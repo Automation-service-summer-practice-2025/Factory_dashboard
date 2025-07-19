@@ -1,0 +1,40 @@
+.page-container {
+	width: 100%;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+.header {
+	display: flex;
+	gap: 10px;
+}
+
+.table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+.table th, .table td {
+  border-bottom: 1px solid #e0e0e0;
+	padding: 16px 12px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* Колонки таблицы */
+.working-status-col {
+	width: 5%;
+}
+
+.name-col {
+	width: 50%;
+	text-align: left !important;
+}
+
+.block-key-status-col {
+	width: 10%;
+}
+
+.checking-date-col {
+	width: 35%;
+}

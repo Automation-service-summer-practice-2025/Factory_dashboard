@@ -20,9 +20,7 @@ export class StationDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const stationId = Number(this.route.snapshot.paramMap.get('station_id'));
-    // this.loadStationData(stationId);
-    this.loadStationMockData(stationId);
-    console.log("station data:", this.station)
+    this.loadStationData(stationId);
   }
 
   loadStationData(stationId: number) {

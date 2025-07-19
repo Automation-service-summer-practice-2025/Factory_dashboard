@@ -1,23 +1,25 @@
-<div *ngIf="station">
-	<p>Производство №1 > {{ station.station_name }}</p>
-	<button>Тех документация</button>
+<div *ngIf="station" class="page-container">
+	<div class="header">
+		<span>Производство №1 > {{ station.station_name }}</span>
+		<button>Тех. документация</button>
+	</div>
 
-	<table>
-    <thead>
-      <tr>
-				<th></th>
-        <th>Название</th>
-				<th>Деблок</th>
-        <th>Период проверки</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let element of station.station_elements">
-				<td>{{ element.working_status ? '✅' : '❌' }}</td>
-        <td>{{ element.element_name }}</td>
-				<td>{{ element.block_key_status ? 'Вкл' : 'Выкл' }}</td>
-        <td>{{ element.checking_date_start | date:'dd.MM.yyyy' }} - {{ element.checking_date_finish | date:'dd.MM.yyyy' }}</td>
-      </tr>
-    </tbody>
-  </table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="working-status-col"></th>
+				<th class="name-col">Название</th>
+				<th class="block-key-status-col">Деблок</th>
+				<th class="checking-date-col">Период проверки</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let element of station.station_elements">
+				<td class="working-status-col">{{ element.working_status ? '✅' : '❌' }}</td>
+				<td class="name-col">{{ element.element_name }}</td>
+				<td class="block-key-status-col">{{ element.block_key_status ? 'Вкл' : 'Выкл' }}</td>
+				<td class="checking-date-col">{{ element.checking_date_start | date:'dd.MM.yyyy' }} - {{ element.checking_date_finish | date:'dd.MM.yyyy' }}</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
