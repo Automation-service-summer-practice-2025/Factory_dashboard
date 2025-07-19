@@ -1,42 +1,29 @@
-<div class="map-container">
-  <base target="_blank">
-  <img
-    src="assets/FactoryMap.png"
-    usemap="#image-map"
-    (mousemove)="onMouseMove($event)"
-    class="responsive-image"
+<base target="_blank">
+<img
+  src="assets/FactoryMap.png"
+  usemap="#image-map"
+  (mousemove)="onMouseMove($event)"
+  class="responsive-image"
+>
+
+<map name="image-map">
+  <area
+    *ngFor="let area of mapAreas"
+    [attr.alt]="area.alt"
+    [attr.href]="area.href"
+    [attr.coords]="area.coords"
+    [attr.shape]="area.shape"
+    (mouseenter)="onAreaHover(area, $event)"
+    (mouseleave)="onAreaLeave()"
   >
+</map>
 
-  <map name="image-map">
-    <area
-      *ngFor="let area of mapAreas"
-      [attr.alt]="area.alt"
-      [attr.href]="area.href"
-      [attr.coords]="area.coords"
-      [attr.shape]="area.shape"
-      (mouseenter)="onAreaHover(area, $event)"
-      (mouseleave)="onAreaLeave()"
-    >
-  </map>
-
-  <div
-    *ngIf="activeTooltip"
-    class="custom-tooltip"
-    [style.left.px]="tooltipPosition.x"
-    [style.top.px]="tooltipPosition.y"
-  >
-    <h4>{{ activeTooltip.title }}</h4>
-    <p>{{ activeTooltip.description }}</p>
-  </div>
-</div>
-
-<div class="side-panels">
-  <app-status-panel
-    *ngFor="let block of statusBlocks"
-    [title]="block.title"
-    [notAck]="block.notAck"
-    [ack]="block.ack"
-    [diag]="block.diag"
-    [status]="block.status"
-  ></app-status-panel>
+<div
+  *ngIf="activeTooltip"
+  class="custom-tooltip"
+  [style.left.px]="tooltipPosition.x"
+  [style.top.px]="tooltipPosition.y"
+>
+  <h4>{{ activeTooltip.title }}</h4>
+  <p>{{ activeTooltip.description }}</p>
 </div>
