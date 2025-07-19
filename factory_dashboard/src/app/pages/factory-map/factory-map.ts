@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import ImageMap from "image-map";
 
 interface MapArea {
   alt: string;
@@ -38,6 +39,10 @@ export class FactoryMap {
   @ViewChild('mapImage') mapImage!: ElementRef<HTMLImageElement>;
 
   constructor(private router: Router) {}
+
+  ngAfterViewInit() {
+    ImageMap('img[usemap]');
+  }
 
   // Конфигурация областей карты
   mapAreas: MapArea[] = [
