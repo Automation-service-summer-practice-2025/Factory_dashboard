@@ -1,5 +1,23 @@
 <div *ngIf="station">
-	<p class="station-name">
-		{{ station.station_name }}
-	</p>
+	<p>Производство №1 > {{ station.station_name }}</p>
+	<button>Тех документация</button>
+
+	<table>
+    <thead>
+      <tr>
+				<th></th>
+        <th>Название</th>
+				<th>Деблок</th>
+        <th>Период проверки</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of station.station_elements">
+				<td>{{ element.working_status ? '✅' : '❌' }}</td>
+        <td>{{ element.element_name }}</td>
+				<td>{{ element.block_key_status ? 'Вкл' : 'Выкл' }}</td>
+        <td>{{ element.checking_date_start | date:'dd.MM.yyyy' }} - {{ element.checking_date_finish | date:'dd.MM.yyyy' }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
