@@ -95,7 +95,7 @@ export class SideBarComponent implements OnInit{
       {
         id: 1,
         number: 'QAH190',
-        status: 'Включен деблок',
+        status: 'Выключен деблок',
         lastMetroControlDate: new Date('2023-01-15'),
         nextMetroControlDate: new Date('2024-01-15'),
         lastCheckDate: new Date('2023-01-10'),

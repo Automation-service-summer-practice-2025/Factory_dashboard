@@ -10,14 +10,16 @@
       </mat-form-field>
     </div>
     
-    <mat-nav-list>
-      <mat-list-item 
-        *ngFor="let position of filteredPositions" 
-        (click)="selectPosition(position)"
-        [class.active]="position.id === selectedPosition?.id">
-        {{ position.number }}
-      </mat-list-item>
-    </mat-nav-list>
+  <mat-nav-list>
+    <mat-list-item 
+      *ngFor="let position of filteredPositions" 
+      (click)="selectPosition(position)"
+      [class.active]="position.id === selectedPosition?.id">
+      <div class="position-indicator" [class.deblock-on]="position.status === 'Включен деблок'"
+                                  [class.deblock-off]="position.status !== 'Включен деблок'"></div>
+      {{ position.number }}
+    </mat-list-item>
+  </mat-nav-list>
   </mat-sidenav>
 
   <!-- Основное содержимое -->
@@ -173,7 +175,7 @@
           </div>
         </div>
       </div>
-      
+
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
