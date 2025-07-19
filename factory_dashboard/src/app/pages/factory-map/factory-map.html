@@ -1,7 +1,51 @@
-<img src="assets/FactoryMap.png" usemap="#image-map">
+<!-- <img src="assets/FactoryMap.png" usemap="#image-map">
 <base target="_blank">
 <map name="image-map">
     <area alt="ВЗП" title="ВЗП" href="station/:1" coords="2072,1210,1939,1391" shape="rect">
     <area alt="АТ-ВБ" title="АТ-ВБ" href="station/:2" coords="976,1272,978,1334,932,1340,927,1383,762,1388,765,1299,859,1299,859,1272" shape="poly">
     <area alt="ЭЛОУ АВТ-6" title="ЭЛОУ АВТ-6" href="station/:3" coords="1022,1432,1306,1559" shape="rect">
-</map>
+</map> -->
+<div class="map-container">
+  <base target="_blank">
+  <img
+    src="assets/FactoryMap.png"
+    usemap="#image-map"
+    (mousemove)="onMouseMove($event)"
+  >
+
+  <map name="image-map">
+    <area
+      *ngFor="let area of mapAreas"
+      [attr.alt]="area.alt"
+      [attr.title]="area.title"
+      [attr.href]="area.href"
+      [attr.coords]="area.coords"
+      [attr.shape]="area.shape"
+      (mouseenter)="onAreaHover(area, $event)"
+      (mouseleave)="onAreaLeave()"
+
+    >
+    <!-- (click)="onAreaClick(area, $event)" -->
+  </map>
+
+  <!-- Кастомный тултип -->
+  <div
+    *ngIf="activeTooltip"
+    class="custom-tooltip"
+    [style.left.px]="tooltipPosition.x"
+    [style.top.px]="tooltipPosition.y"
+  >
+    <h4>{{ activeTooltip.title }}</h4>
+    <p>{{ activeTooltip.description }}</p>
+  </div>
+
+  <!-- Подсветка области (опционально) -->
+  <!-- <div
+    *ngIf="highlightedArea"
+    class="highlight-area"
+    [style.left.px]="highlightedArea.x"
+    [style.top.px]="highlightedArea.y"
+    [style.width.px]="highlightedArea.width"
+    [style.height.px]="highlightedArea.height"
+  ></div> -->
+</div>
