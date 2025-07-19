@@ -25,7 +25,9 @@
 					{{ element.element_name }}
 				</td>
 				<td class="block-key-status-col">
-					{{ element.block_key_status ? 'Вкл' : 'Выкл' }}
+					<span class="status-badge" [class.enabled]="element.block_key_status">
+						{{ element.block_key_status ? 'Выкл' : 'Вкл' }}
+					</span>
 				</td>
 				<td class="checking-date-col">
 					{{ element.checking_date_start | date:'dd.MM.yyyy' }} - {{ element.checking_date_finish | date:'dd.MM.yyyy' }}
