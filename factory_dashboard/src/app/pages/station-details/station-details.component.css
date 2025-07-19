@@ -71,3 +71,52 @@
   background-color: #d2d0d0;
 	border-radius: 5px;
 }
+
+.status-toggle {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+}
+
+.status-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: not-allowed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 18px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(15px);
+}
+
+input:disabled + .slider {
+  opacity: 0.7;
+}

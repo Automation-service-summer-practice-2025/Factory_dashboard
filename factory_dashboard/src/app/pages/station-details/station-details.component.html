@@ -15,10 +15,21 @@
 		</thead>
 		<tbody>
 			<tr *ngFor="let element of paginatedItems">
-				<td class="working-status-col">{{ element.working_status ? '✅' : '❌' }}</td>
-				<td class="name-col">{{ element.element_name }}</td>
-				<td class="block-key-status-col">{{ element.block_key_status ? 'Вкл' : 'Выкл' }}</td>
-				<td class="checking-date-col">{{ element.checking_date_start | date:'dd.MM.yyyy' }} - {{ element.checking_date_finish | date:'dd.MM.yyyy' }}</td>
+				<td class="working-status-col">
+					<label class="status-toggle">
+						<input type="checkbox" [checked]="element.working_status" disabled>
+						<span class="slider"></span>
+					</label>
+				</td>
+				<td class="name-col">
+					{{ element.element_name }}
+				</td>
+				<td class="block-key-status-col">
+					{{ element.block_key_status ? 'Вкл' : 'Выкл' }}
+				</td>
+				<td class="checking-date-col">
+					{{ element.checking_date_start | date:'dd.MM.yyyy' }} - {{ element.checking_date_finish | date:'dd.MM.yyyy' }}
+				</td>
 			</tr>
 		</tbody>
 	</table>
