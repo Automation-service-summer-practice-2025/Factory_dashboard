@@ -34,28 +34,17 @@ import { Elements } from '../models/elements.model';
 
 export class SideBarComponent implements OnInit{
   searchTerm: string = '';
-  // positions!: Position[];  // Kir
-  // filteredPositions: Position[] = [];  // Kir
-  // selectedPosition: Position | null = null; // Kir
 
-  elements!: Elements[]; //API
-  filteredElements: Elements[] = []; //API
-  selectedElements: Elements | null = null; //API
+  elements!: Elements[];
+  filteredElements: Elements[] = [];
+  selectedElements: Elements | null = null;
 
   constructor(private apiService: APIService) {}
 
   ngOnInit(): void {
     this.loadElementsData();
-    // this.loadElementsMockData();
 
-    // this.filteredPositions = [...this.positions]; // Kir
-    this.filteredElements = [...this.elements]; //API
-
-
-    // Выбираем первую позицию по умолчанию
-    // if (this.filteredPositions.length > 0) {
-    //   this.selectedPosition = this.filteredPositions[0];
-    // }
+    this.filteredElements = [...this.elements];
 
     if (this.filteredElements.length > 0) {
       this.selectedElements = this.filteredElements[0];
@@ -64,21 +53,14 @@ export class SideBarComponent implements OnInit{
 
   filterPositions(): void {
     if (!this.searchTerm) {
-      // this.filteredPositions = [...this.positions];
       this.filteredElements = [...this.elements];
     } else {
-      // this.filteredPositions = this.positions.filter(position =>
-      //   position.number.toLowerCase().includes(this.searchTerm.toLowerCase())
-      // );
       this.filteredElements = this.elements.filter(element =>
         element.element_name.toLowerCase().includes(this.searchTerm.toLowerCase())
       );
     }
   }
 
-  // selectPosition(position: Position): void {
-  //   this.selectedPosition = position;
-  // }
   selectElements(element: Elements): void {
     this.selectedElements = element;
   }
@@ -86,7 +68,6 @@ export class SideBarComponent implements OnInit{
   loadElementsData() {
     this.apiService.getElements().subscribe({
       next: (data) => {
-        // this.positions = data;
         this.elements = data;
         console.log('Загружено:', data);
       },
@@ -97,7 +78,6 @@ export class SideBarComponent implements OnInit{
   }
 
   loadElementsMockData() {
-    // this.positions = [...Kir_ELEMENTS_MOCK];
     this.elements = [...API_ELEMENTS_MOCK];
 
   }
