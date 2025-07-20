@@ -16,8 +16,4 @@ export const routes: Routes = [
     path: '',
     component: LoadWindowComponent
   },
-  {
-    path: 'element_id', 
-    component: SideBarComponent
-  }
 ];
