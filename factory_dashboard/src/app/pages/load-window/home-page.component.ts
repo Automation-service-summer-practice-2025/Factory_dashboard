@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FactoryMap } from "../factory-map/factory-map";
-import { StatusPanelComponent } from '../status-panel/status-panel.component';
+import { FactoryMap } from "../../components/factory-map/factory-map";
+import { StatusPanelComponent } from '../../components/status-panel/status-panel.component';
 
 
 @Component({

@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { StationDetailsComponent } from './pages/station-details/station-details.component';
-import { FactoryMap } from './pages/factory-map/factory-map';
-import { HomePageComponent } from './pages/home-page/home-page.component';
+import { HomePageComponent } from './pages/load-window/home-page.component';
 
 export const routes: Routes = [
   {
