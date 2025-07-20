@@ -73,6 +73,12 @@
 	width: 35%;
 }
 
+/* Иконка редактирования */
+.edit-icon {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
 /* пагинация */
 .pagination {
 	display: flex;

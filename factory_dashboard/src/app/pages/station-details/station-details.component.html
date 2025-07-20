@@ -40,13 +40,15 @@
   </table>
 
   <div class="pagination">
+    <span class="edit-icon">✏️</span>
     <button (click)="prevPage()" [disabled]="currentPage === 1">
-      < Назад </button>
-        <span *ngFor="let page of getPages()" [class.active]="page === currentPage" (click)="goToPage(page)">
-          {{ page }}
-        </span>
-        <button (click)="nextPage()" [disabled]="currentPage === totalPages">
-          Вперед >
-        </button>
+      < Назад
+    </button>
+    <span *ngFor="let page of getPages()" [class.active]="page === currentPage" (click)="goToPage(page)">
+      {{ page }}
+    </span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">
+      Вперед >
+    </button>
   </div>
 </div>
