@@ -329,6 +329,6 @@ export class StationDetailsComponent implements OnInit {
   }
 
   goToElementDetails(elementId: number): void {
-    this.router.navigate([`/stations/${this.station.station_id}/${elementId}`]);
+    this.router.navigate([`/station/${this.station.station_id}/${elementId}`]);
   }
 }
