@@ -21,4 +21,8 @@ export class APIService {
   getStatus(): Observable<any> {
     return this.http.get(`${this.apiUrl}/status`);
   }
+
+  getWeather(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/weather`);
+  }
 }
