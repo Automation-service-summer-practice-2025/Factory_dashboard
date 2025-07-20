@@ -45,6 +45,11 @@
 	vertical-align: middle;
 }
 
+.table tbody tr:hover td {
+  background-color: #eeeeee;;
+  cursor: pointer;
+}
+
 /* Колонки таблицы */
 .working-status-col {
 	width: 5%;
