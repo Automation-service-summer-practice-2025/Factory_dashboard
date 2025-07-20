@@ -1,11 +1,11 @@
 .map-container {
-  position: fixed;
+  position: absolute;
   width: 80vw;
   height: 100vh;
 }
 
 .side-panels {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   text-align: right;
