@@ -14,7 +14,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let element of paginatedItems">
+      <tr *ngFor="let element of paginatedItems" (click)="goToElementDetails(element.element_id)">
         <td class="working-status-col">
           <label class="status-toggle">
             <input type="checkbox" [checked]="element.working_status" disabled>
