@@ -1,11 +1,7 @@
-.home-page {
-  background-color: #a3a3a3;
-}
-
 .map-container {
-  position: relative;
+  position: fixed;
   width: 80vw;
-  height: 98vh;
+  height: 100vh;
 }
 
 .side-panels {
@@ -18,3 +14,12 @@
   margin-top: 8px;
 }
 
+:host {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #a3a3a3;
+}

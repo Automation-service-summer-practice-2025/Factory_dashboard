@@ -40,7 +40,7 @@ export class FactoryMap {
   }
 
   loadMapMockData() {
-    this.mapAreas = {...MAP_AREAS_MOCK};
+    this.mapAreas = [...MAP_AREAS_MOCK];
   }
 
   activeTooltip: TooltipData | null = null;
