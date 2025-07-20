@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { APIService } from '../../services/api.service'
 import { StatusData } from '../../models/status.model';
+import { STATUS_INFO_MOCK } from '../../mocks/StatusInfo.mock';
 
 @Component({
   selector: 'app-status-panel',
@@ -33,28 +34,7 @@ export class StatusPanelComponent {
   }
 
   loadStatusInfoMockData() {
-    this.statusInfo = [
-      {
-        title: 'Загазованность',
-        notAck: 2,
-        ack: 0,
-        diag: 0,
-        status: 'gas'
-      },
-      {
-        title: 'Деблокировочные ключи',
-        notAck: 483,
-        ack: 0,
-        diag: 0,
-        status: 'keys'
-      },
-      {
-        title: 'Блокировки и сигнализация',
-        notAck: 19,
-        ack: 0,
-        diag: 0,
-        status: 'block'
-      }];
+    this.statusInfo = [...STATUS_INFO_MOCK];
   }
 
 }

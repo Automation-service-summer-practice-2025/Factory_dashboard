@@ -3,5 +3,4 @@ export interface StatusData {
   notAck: number;
   ack: number;
   diag: number;
-  status: string;
 }
