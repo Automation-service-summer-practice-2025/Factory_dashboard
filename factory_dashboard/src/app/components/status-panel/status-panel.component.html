@@ -1,0 +1,38 @@
+<div class="status-panel">
+  <div class="panel-title">Метеоданные</div>
+  <div class="panel-row">
+      <span>Температура</span>
+      <span class="panel-num">
+        <span class="value">{{ weather.temperature }}</span>
+        <span class="unit">℃</span>
+      </span>
+  </div>
+  <div class="panel-row">
+      <span>Ветер</span>
+      <span class="panel-num">{{ weather.wind }} м/c</span>
+  </div>
+    <div class="panel-row">
+      <span>Направление</span>
+      <span class="panel-num">{{ weather.direction }} град.</span>
+  </div>
+    <div class="panel-row">
+      <span>Давление</span>
+      <span class="panel-num">{{ weather.pressure }} мм.рт.ст.</span>
+  </div>
+</div>
+
+<div class="status-panel" *ngFor="let status of statusInfo">
+  <div class="panel-title">{{ status.title }}</div>
+  <div class="panel-row">
+    <span>Не квитировано</span>
+    <span class="panel-num highlight">{{ status.notAck }}</span>
+  </div>
+  <div class="panel-row">
+    <span>Квитировано</span>
+    <span class="panel-num">{{ status.ack }}</span>
+  </div>
+  <div class="panel-row">
+    <span>Диагностика</span>
+    <span class="panel-num">{{ status.diag }}</span>
+  </div>
+</div>
