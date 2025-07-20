@@ -1,14 +1,13 @@
 export interface MapArea {
-  alt: string;
-  title: string;
-  href: string;
+  station_id: number;
+  station_name: string;
   coords: string;
   shape: 'rect' | 'poly' | 'circle';
   description?: string;
 }
 
 export interface TooltipData {
-  title: string;
+  station_name: string;
   description?: string;
 }
 

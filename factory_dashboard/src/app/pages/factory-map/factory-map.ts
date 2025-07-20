@@ -41,25 +41,22 @@ export class FactoryMap {
   loadMapMockData() {
     this.mapAreas = [
     {
-      alt: 'ВЗП',
-      title: 'ВЗП: Входная зона переработки',
-      href: 'station/:1',
+      station_id: 1,
+      station_name: 'ВЗП',
       coords: '2072,1210,1939,1391',
       shape: 'rect',
-      description: 'Описание станции ВЗП...'
+      description: 'Описание станции ВЗП...',
     },
     {
-      alt: 'АТ-ВБ',
-      title: 'АТ-ВБ: Автоматическая транспортировка',
-      href: 'station/:2',
+      station_id: 2,
+      station_name: 'АТ-ВБ',
       coords: '976,1272,978,1334,932,1340,927,1383,762,1388,765,1299,859,1299,859,1272',
       shape: 'poly',
       description: 'Описание станции АТ-ВБ...'
     },
     {
-      alt: 'ЭЛОУ АВТ-6',
-      title: 'ЭЛОУ АВТ-6: Электродегидрационная установка',
-      href: 'station/:3',
+      station_id: 3,
+      station_name: 'ЭЛОУ АВТ-6',
       coords: '1022,1432,1306,1559',
       shape: 'rect',
       description: 'Описание станции ЭЛОУ АВТ-6...'
@@ -73,7 +70,7 @@ export class FactoryMap {
   // Обработка наведения на область
   onAreaHover(area: MapArea, event: MouseEvent): void {
     this.activeTooltip = {
-      title: area.title,
+      station_name: area.station_name,
       description: area.description
     };
     this.updateTooltipPosition(event);

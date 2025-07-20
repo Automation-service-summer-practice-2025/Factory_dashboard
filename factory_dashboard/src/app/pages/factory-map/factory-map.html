@@ -9,8 +9,7 @@
 <map name="image-map">
   <area
     *ngFor="let area of mapAreas"
-    [attr.alt]="area.alt"
-    [attr.href]="area.href"
+    [attr.href]="'station/:' + area.station_id"
     [attr.coords]="area.coords"
     [attr.shape]="area.shape"
     (mouseenter)="onAreaHover(area, $event)"
@@ -24,6 +23,6 @@
   [style.left.px]="tooltipPosition.x"
   [style.top.px]="tooltipPosition.y"
 >
-  <h4>{{ activeTooltip.title }}</h4>
+  <h4>{{ activeTooltip.station_name }}</h4>
   <p>{{ activeTooltip.description }}</p>
 </div>
