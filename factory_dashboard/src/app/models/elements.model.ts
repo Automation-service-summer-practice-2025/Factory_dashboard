@@ -1,36 +1,5 @@
 import { Documents } from "./documents.model";
 
-export interface Position {
-  id: number;
-  number: string;
-  status: string;
-  lastMetroControlDate: Date;
-  nextMetroControlDate: Date;
-  lastCheckDate: Date;
-  manufacturerData: {
-    name: string;
-    passportNumber: string;
-    serialNumber: string;
-    // country: string;
-    // productionDate: Date;
-    // isImported: boolean;
-    // dimensions: string;
-    // weight: string;
-  };
-  fgisArshinNumber: string;
-  checkInterval: string;
-  measurementRangeNKPR: string;
-  acts: {
-    id: number;
-    documentName: string;
-    repairType: string;
-    plannedStartDate: Date;
-    actualStartDate: Date | null;
-    plannedEndDate: Date;
-    actualEndDate: Date | null;
-  }[];
-}
-
 export interface Elements {
   element_id: number;
   element_name: string;

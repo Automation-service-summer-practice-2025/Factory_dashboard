@@ -9,8 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { APIService } from '../services/api.service';
-import { API_ELEMENTS_MOCK, Kir_ELEMENTS_MOCK } from '../mocks/Elements.mock';
-import { Position } from '../models/elements.model';
+import { API_ELEMENTS_MOCK } from '../mocks/Elements.mock';
 import { Elements } from '../models/elements.model';
 
 @Component({
