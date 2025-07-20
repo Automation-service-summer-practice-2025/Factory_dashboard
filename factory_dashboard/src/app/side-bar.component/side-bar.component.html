@@ -9,15 +9,23 @@
         <mat-icon matSuffix>search</mat-icon>
       </mat-form-field>
     </div>
-    
+
   <mat-nav-list>
-    <mat-list-item 
-      *ngFor="let position of filteredPositions" 
+    <!-- <mat-list-item
+      *ngFor="let position of filteredPositions"
       (click)="selectPosition(position)"
       [class.active]="position.id === selectedPosition?.id">
       <div class="position-indicator" [class.deblock-on]="position.status === 'Включен деблок'"
                                   [class.deblock-off]="position.status !== 'Включен деблок'"></div>
       {{ position.number }}
+    </mat-list-item> -->
+    <mat-list-item
+      *ngFor="let position of filteredElements"
+      (click)="selectElements(position)"
+      [class.active]="position.element_id === selectedElements?.element_id">
+      <div class="position-indicator" [class.deblock-on]="position?.params?.block_key_status"
+                                  [class.deblock-off]="!position?.params?.block_key_status"></div>
+      {{ position.element_name }}
     </mat-list-item>
   </mat-nav-list>
   </mat-sidenav>
@@ -25,11 +33,11 @@
   <!-- Основное содержимое -->
   <mat-sidenav-content class="content">
     <!-- Здесь будет основной контент экрана с деталями позиции -->
-    <div *ngIf="selectedPosition" class="position-details">
+     <div *ngIf="selectElements" class="position-details"><!--selectedPosition -->
       <!-- Заголовок -->
       <div class="header-section">
-        <h2>Технологический № {{ selectedPosition.number }}</h2>
-        
+        <h2>Технологический № {{ selectedElements?.element_name }}</h2><!--selectedPosition.number -->
+
         <div class="header-actions">
           <button mat-raised-button color="primary" class="action-button">
             Тех. документация
@@ -39,82 +47,82 @@
           </button>
         </div>
       </div>
-      
+
       <!-- Основная информация -->
       <div class="info-section">
         <h3>Общая информация</h3>
         <div class="info-grid">
           <div class="info-item">
             <span class="info-label">Статус:</span>
-            <span class="info-value">{{ selectedPosition.status }}</span>
+             <span class="info-value">{{ selectedElements?.params?.block_key_status }}</span> <!--selectedPosition.status -->
           </div>
-          
+
           <div class="info-item">
             <span class="info-label">Последний контроль:</span>
-            <span class="info-value">{{ selectedPosition.lastMetroControlDate | date:'dd.MM.yyyy' }}</span>
+            <span class="info-value">{{ selectedElements?.params?.last_metrological_control | date:'dd.MM.yyyy' }}</span> <!-- selectedPosition.lastMetroControlDate | date:'dd.MM.yyyy' -->
           </div>
-          
+
           <div class="info-item">
             <span class="info-label">Следующий контроль:</span>
-            <span class="info-value">{{ selectedPosition.nextMetroControlDate | date:'dd.MM.yyyy' }}</span>
+            <span class="info-value">{{ getNextControlDate(selectedElements?.params?.last_metrological_control, selectedElements?.params?.interval_check) | date:'dd.MM.yyyy' }}</span> <!-- selectedPosition.nextMetroControlDate | date:'dd.MM.yyyy' -->
           </div>
-          
+
           <div class="info-item">
             <span class="info-label">Последняя проверка:</span>
-            <span class="info-value">{{ selectedPosition.lastCheckDate | date:'dd.MM.yyyy' }}</span>
+            <span class="info-value">{{ selectedElements?.params?.last_check | date:'dd.MM.yyyy' }}</span> <!-- selectedPosition.lastCheckDate | date:'dd.MM.yyyy' -->
           </div>
         </div>
       </div>
             <!-- Данные изготовителя -->
       <div class="manufacturer-section">
         <h3>Данные изготовителя</h3>
-        
+
         <!-- Первая строка -->
         <div class="manufacturer-row">
           <div class="manufacturer-item">
             <span class="manufacturer-label">Изготовитель:</span>
-            <span class="manufacturer-value">{{ selectedPosition.manufacturerData.name }}</span>
+            <span class="manufacturer-value">{{ selectedElements?.params?.manufacturer }}</span> <!-- selectedPosition.manufacturerData.name -->
           </div>
-          
-          <div class="manufacturer-item">
+
+          <!-- <div class="manufacturer-item">
             <span class="manufacturer-label">Страна-изготовитель:</span>
             <span class="manufacturer-value">{{ selectedPosition.manufacturerData.country }}</span>
-          </div>
-          
-          <div class="manufacturer-item">
+          </div> -->
+
+          <!-- <div class="manufacturer-item">
             <span class="manufacturer-label">Дата выпуска:</span>
             <span class="manufacturer-value">{{ selectedPosition.manufacturerData.productionDate | date:'dd.MM.yyyy' }}</span>
-          </div>
-          
-          <div class="manufacturer-item">
+          </div> -->
+
+          <!-- <div class="manufacturer-item">
             <span class="manufacturer-label">Импортный:</span>
             <span class="manufacturer-value">{{ selectedPosition.manufacturerData.isImported ? 'Да' : 'Нет' }}</span>
-          </div>
+          </div> -->
         </div>
-        
+
         <!-- Вторая строка -->
         <div class="manufacturer-row">
           <div class="manufacturer-item">
             <span class="manufacturer-label">Номер паспорта:</span>
-            <span class="manufacturer-value">{{ selectedPosition.manufacturerData.passportNumber }}</span>
+            <span class="manufacturer-value">{{ selectedElements?.params?.passport }}</span> <!-- selectedPosition.manufacturerData.passportNumber -->
           </div>
-          
-          <div class="manufacturer-item">
+
+          <!-- <div class="manufacturer-item">
             <span class="manufacturer-label">Габаритные размеры, ДхВхШ, мм:</span>
             <span class="manufacturer-value">{{ selectedPosition.manufacturerData.dimensions }}</span>
-          </div>
-          
-          <div class="manufacturer-item">
+          </div> -->
+
+          <!-- <div class="manufacturer-item">
             <span class="manufacturer-label">Масса объекта:</span>
             <span class="manufacturer-value">{{ selectedPosition.manufacturerData.weight }}</span>
-          </div>
+          </div> -->
         </div>
-        
+
         <!-- Третья строка -->
         <div class="manufacturer-row">
           <div class="manufacturer-item">
             <span class="manufacturer-label">Заводской номер:</span>
-            <span class="manufacturer-value">{{ selectedPosition.manufacturerData.serialNumber }}</span>
+            <span class="manufacturer-value">{{ selectedElements?.params?.factory }}</span> <!-- selectedPosition.manufacturerData.serialNumber -->
           </div>
         </div>
       </div>
@@ -122,29 +130,29 @@
       <!-- Паспортные характеристики -->
       <div class="passport-section">
         <h3>Паспортные характеристики</h3>
-        
+
         <div class="passport-list">
           <div class="passport-item">
             <span class="passport-label">Номер свидетельства ФГИС Аршин:</span>
-            <span class="passport-value">{{ selectedPosition.fgisArshinNumber }}</span>
+            <span class="passport-value">{{ selectedElements?.params?.certificate }}</span> <!-- selectedPosition.fgisArshinNumber -->
           </div>
-          
+
           <div class="passport-item">
             <span class="passport-label">Межповерочный интервал:</span>
-            <span class="passport-value">{{ selectedPosition.checkInterval }}</span>
+            <span class="passport-value">{{ selectedElements?.params?.interval_check }}</span> <!-- selectedPosition.checkInterval-->
           </div>
-          
+
           <div class="passport-item">
             <span class="passport-label">Диапазон измерений НКПР компонента:</span>
-            <span class="passport-value">{{ selectedPosition.measurementRangeNKPR }}</span>
+            <span class="passport-value">{{ selectedElements?.params?.range_measurement }}</span> <!-- selectedPosition.measurementRangeNKPR-->
           </div>
         </div>
       </div>
-      
+
       <!-- Акты выполненных работ -->
       <div class="acts-section">
         <h3>Акты выполненных работ</h3>
-        
+
         <div class="acts-table">
           <!-- Заголовки таблицы -->
           <div class="acts-header">
@@ -153,19 +161,19 @@
             <div class="acts-column">Дата начала</div>
             <div class="acts-column">Дата окончания</div>
           </div>
-          
+
           <!-- Строки с данными -->
-          <div class="acts-row" *ngFor="let act of selectedPosition.acts">
+          <div class="acts-row" *ngFor="let act of selectedElements?.documents"> <!-- selectedPosition.acts -->
             <div class="acts-cell">{{ act.documentName }}</div>
             <div class="acts-cell">{{ act.repairType }}</div>
-            
+
             <div class="acts-cell date-cell">
               <div class="date-plan">План: {{ act.plannedStartDate | date:'dd.MM.yyyy HH:mm:ss' }}</div>
               <div class="date-actual" *ngIf="act.actualStartDate">
                 Факт: {{ act.actualStartDate | date:'dd.MM.yyyy HH:mm:ss' }}
               </div>
             </div>
-            
+
             <div class="acts-cell date-cell">
               <div class="date-plan">План: {{ act.plannedEndDate | date:'dd.MM.yyyy HH:mm:ss' }}</div>
               <div class="date-actual" *ngIf="act.actualEndDate">

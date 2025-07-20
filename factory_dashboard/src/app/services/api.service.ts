@@ -25,4 +25,20 @@ export class APIService {
   getWeather(): Observable<any> {
     return this.http.get(`${this.apiUrl}/weather`);
   }
+
+  getElements(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/elements`);
+  }
+
+  getElementById(elements_id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/elements/${elements_id}`);
+  }
+
+  getDocuments(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/documents`);
+  }
+
+  getDocumentById(document_id: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/documents/${document_id}`);
+  }
 }
