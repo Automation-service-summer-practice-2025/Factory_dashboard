@@ -1,0 +1,319 @@
+.sidenav-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 300px;
+  border-right: 1px solid #eee;
+}
+
+.sidenav mat-list-item {
+  border-radius: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.sidenav-header {
+  margin-bottom: 16px;
+  
+  h3 {
+    margin: 0 0 16px 0;
+    font-weight: 500;
+  }
+}
+
+.search-field {
+  width: 100%;
+}
+
+.content {
+  padding: 24px;
+}
+
+/* Статусы и даты */
+
+.position-details {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-section, .acts-section, .actions-section {
+  margin-bottom: 32px;
+}
+
+.info-section {
+  margin-bottom: 32px;
+  background: #f5f5f5;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.info-label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.info-value {
+  font-size: 16px;
+}
+
+.acts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.act-button {
+  text-align: left;
+}
+
+.action-button {
+  margin-right: 16px;
+}
+
+.active {
+  background-color: #e0e0e0;
+  font-weight: 500;
+}
+
+/* Данные изготовителя */
+
+.manufacturer-section {
+  margin-bottom: 32px;
+  background: #f5f5f5;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.manufacturer-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.manufacturer-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  min-width: 0;
+}
+
+.manufacturer-row:last-child .manufacturer-item {
+  flex: none;
+  width: 100%;
+  /* max-width: 300px; Или нужная вам ширина */
+}
+
+.manufacturer-label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.manufacturer-value {
+  font-size: 16px;
+  word-break: break-word;
+}
+
+.import-icon {
+  color: #3f51b5;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .manufacturer-row {
+    flex-direction: column;
+  }
+  
+  .manufacturer-row:last-child .manufacturer-item {
+    max-width: 100%;
+  }
+  
+  .manufacturer-item {
+    width: 100%;
+  }
+}
+
+/* Стили паспортных характеристик */
+
+.passport-section {
+  margin-bottom: 32px;
+  background: #f5f5f5;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.passport-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.passport-item {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.passport-label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.passport-value {
+  font-size: 16px;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .passport-item {
+    width: 100%;
+  }
+}
+
+/* Стили актов */
+
+.acts-table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.acts-header {
+  display: table-header-group;
+  background: #3f51b5;
+  color: white;
+}
+
+.acts-row {
+  display: table-row;
+}
+
+.acts-column, .acts-cell {
+  display: table-cell;
+  padding: 12px;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+.acts-header .acts-column {
+  font-weight: 500;
+  text-align: center;
+}
+
+.date-cell {
+  padding: 0;
+}
+
+.date-plan, .date-actual {
+  padding: 6px 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.date-plan {
+  background: #f9f9f9;
+}
+
+.date-actual {
+  background: white;
+}
+
+/* Стили для заголовка и кнопок */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 16px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .action-button {
+    margin-right: 0;
+    flex: 1;
+  }
+}
+
+/* Стили для индикатора позиции */
+mat-list-item {
+  position: relative;
+  padding-left: 12px !important;
+}
+
+.position-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+
+.deblock-on {
+  background-color: #9e9e9e; /* Серый цвет для включенного деблока */
+}
+
+.deblock-off {
+  background-color: #4caf50; /* Зеленый цвет для выключенного деблока */
+}
+
+/* Для активного элемента */
+mat-list-item.active .position-indicator {
+  width: 6px;
+  left: -1px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .position-indicator {
+    width: 3px;
+  }
+  
+  mat-list-item.active .position-indicator {
+    width: 5px;
+  }
+}
