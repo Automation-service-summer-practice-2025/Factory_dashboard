@@ -12,7 +12,7 @@
   border-radius: 4px;
   max-width: 300px;
   pointer-events: none;
-  z-index: 1000;
+  z-index: 999;
 
   h4 {
     margin: 0 0 5px 0;
@@ -24,12 +24,4 @@
     margin: 0;
     font-size: 14px;
   }
-}
-
-.highlight-area {
-  position: absolute;
-  background: rgba(255, 255, 0, 0.3);
-  border: 2px solid yellow;
-  pointer-events: none;
-  z-index: 999;
 }
