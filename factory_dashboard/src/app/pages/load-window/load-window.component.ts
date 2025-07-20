@@ -4,11 +4,11 @@ import { StatusPanelComponent } from '../../components/status-panel/status-panel
 
 
 @Component({
-  selector: 'app-home-page',
+  selector: 'app-load-window',
   imports: [FactoryMap, StatusPanelComponent],
-  templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.css'
+  templateUrl: './load-window.component.html',
+  styleUrl: './load-window.component.css'
 })
-export class HomePageComponent {
+export class LoadWindowComponent {
 
 }

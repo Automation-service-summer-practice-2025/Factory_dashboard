@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { StationDetailsComponent } from './pages/station-details/station-details.component';
-import { HomePageComponent } from './pages/load-window/home-page.component';
+import { LoadWindowComponent } from './pages/load-window/load-window.component';
 
 export const routes: Routes = [
   {
@@ -9,6 +9,6 @@ export const routes: Routes = [
   },
   {
     path: '',
-    component: HomePageComponent
+    component: LoadWindowComponent
   }
 ];

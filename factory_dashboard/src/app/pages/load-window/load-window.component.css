@@ -12,6 +12,7 @@
   width: 20vw;
   height: auto;
   margin-top: 8px;
+  z-index: 100;
 }
 
 :host {
