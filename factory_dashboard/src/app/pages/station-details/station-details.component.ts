@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { APIService } from '../../services/api.service';
 import { Station } from '../../models/station.model';
 import { CommonModule } from '@angular/common';
@@ -17,7 +17,8 @@ export class StationDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private apiService: APIService
+    private apiService: APIService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -325,5 +326,9 @@ export class StationDetailsComponent implements OnInit {
     if (this.currentPage < this.totalPages) {
       this.currentPage++;
     }
+  }
+
+  goToElementDetails(elementId: number): void {
+    this.router.navigate([`/stations/${this.station.station_id}/${elementId}`]);
   }
 }
