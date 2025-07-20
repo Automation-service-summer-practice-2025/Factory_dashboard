@@ -42,7 +42,7 @@ export class SideBarComponent implements OnInit{
   constructor(private apiService: APIService) {}
 
   ngOnInit(): void {
-    this.loadElementsData();
+    this.loadElementsMockData();
 
     this.filteredElements = [...this.elements];
 

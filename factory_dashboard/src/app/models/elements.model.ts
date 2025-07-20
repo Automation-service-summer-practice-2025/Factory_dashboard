@@ -1,3 +1,5 @@
+import { Documents } from "./documents.model";
+
 export interface Position {
   id: number;
   number: string;
@@ -45,33 +47,5 @@ export interface Elements {
     block_key_status: boolean;
     working_status: boolean
   };
-  documents?: {
-    id: number;
-    documentName: string;
-    repairType: string;
-    plannedStartDate: Date;
-    actualStartDate: Date | null;
-    plannedEndDate: Date;
-    actualEndDate: Date | null;
-  }[];
+  documents?: Documents[];
 }
-
-/*
-API                                   Kirill
-"element_id": 101,                  - id
-"element_name": "Насос H-21",       - number
-"station_id": 1,                    - none    
-"params": {                         - manufacturerData
-    "manufacturer": "АО Электро-стандарт", - name
-    "passport": 7000133318,                - passportNumber
-    "factory": 87133,                      - serialNumber
-    "certificate": "C-MA/17.01-2024/3094635724", - fgisArshinNumber
-    "interval_check": 2,                         - checkInterval
-    "last_metrological_control": "2024-01-15T10:00:00", - lastMetroControlDate
-    "last_check": "2024-01-15T00:00:00",                - lastCheckDate
-    "range_measurement": "0-50% 4КПРC6H14",  - measurementRangeNKPR
-    "block_key_status": true,                - status 'Выключен деблок' ! в API boolean
-    "working_status": true                   - none - это зеленая или серая плашка в левом меню
-},
-"documents": null                   - acts
-*/
