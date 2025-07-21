@@ -1,4 +1,4 @@
-import { Documents } from "./documents.model";
+import { Documents } from './documents.model';
 
 export interface Elements {
   element_id: number;
@@ -14,7 +14,7 @@ export interface Elements {
     last_check: Date;
     range_measurement: string;
     block_key_status: boolean;
-    working_status: boolean
+    working_status: boolean;
   };
   documents?: Documents[];
 }

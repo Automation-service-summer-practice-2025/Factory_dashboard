@@ -6,4 +6,4 @@ export interface Documents {
   actualStartDate: Date | null;
   plannedEndDate: Date;
   actualEndDate: Date | null;
-};
+}

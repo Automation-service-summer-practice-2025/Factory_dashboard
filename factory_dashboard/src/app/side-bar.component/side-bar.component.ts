@@ -24,14 +24,13 @@ import { Elements } from '../models/elements.model';
     MatButtonModule,
     FormsModule,
     DatePipe,
-    CommonModule
+    CommonModule,
   ],
   templateUrl: './side-bar.component.html',
   styleUrl: './side-bar.component.css',
-  providers: [DatePipe]
+  providers: [DatePipe],
 })
-
-export class SideBarComponent implements OnInit{
+export class SideBarComponent implements OnInit {
   searchTerm: string = '';
 
   elements!: Elements[];
@@ -54,8 +53,10 @@ export class SideBarComponent implements OnInit{
     if (!this.searchTerm) {
       this.filteredElements = [...this.elements];
     } else {
-      this.filteredElements = this.elements.filter(element =>
-        element.element_name.toLowerCase().includes(this.searchTerm.toLowerCase())
+      this.filteredElements = this.elements.filter((element) =>
+        element.element_name
+          .toLowerCase()
+          .includes(this.searchTerm.toLowerCase()),
       );
     }
   }
@@ -72,16 +73,18 @@ export class SideBarComponent implements OnInit{
       },
       error: (err) => {
         console.error('Ошибка загрузки данных:', err);
-      }
+      },
     });
   }
 
   loadElementsMockData() {
     this.elements = [...API_ELEMENTS_MOCK];
-
   }
 
-  getNextControlDate(controlDate: Date | undefined, intervalYears: number | undefined): Date | undefined {
+  getNextControlDate(
+    controlDate: Date | undefined,
+    intervalYears: number | undefined,
+  ): Date | undefined {
     if (controlDate && intervalYears) {
       const result = new Date(controlDate);
       result.setFullYear(result.getFullYear() + intervalYears);

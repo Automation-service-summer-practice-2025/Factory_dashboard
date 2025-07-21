@@ -1,29 +1,29 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import ImageMap from "image-map";
+import ImageMap from 'image-map';
 import { APIService } from '../../services/api.service';
-import { MapArea, TooltipData, Position } from '../../models/factory.model'
+import { MapArea, TooltipData, Position } from '../../models/factory.model';
 import { MAP_AREAS_MOCK } from '../../mocks/MapArea.mock';
 
 @Component({
   selector: 'app-factory-map',
-  imports: [ CommonModule ],
+  imports: [CommonModule],
   templateUrl: './factory-map.html',
-  styleUrl: './factory-map.css'
+  styleUrl: './factory-map.css',
 })
 export class FactoryMap {
   @ViewChild('mapImage') mapImage!: ElementRef<HTMLImageElement>;
 
   ngOnInit(): void {
     // this.loadMapData();
-    this.loadMapMockData()
+    this.loadMapMockData();
   }
 
   ngAfterViewInit() {
     ImageMap('img[usemap]');
   }
 
-  constructor (private apiService: APIService) {}
+  constructor(private apiService: APIService) {}
 
   mapAreas!: MapArea[];
 
@@ -35,7 +35,7 @@ export class FactoryMap {
       },
       error: (err) => {
         console.error('Ошибка загрузки данных установки:', err);
-      }
+      },
     });
   }
 
@@ -50,7 +50,7 @@ export class FactoryMap {
   onAreaHover(area: MapArea, event: MouseEvent): void {
     this.activeTooltip = {
       station_name: area.station_name,
-      description: area.description
+      description: area.description,
     };
     this.updateTooltipPosition(event);
   }
@@ -71,7 +71,7 @@ export class FactoryMap {
     const offset = 15;
     this.tooltipPosition = {
       x: event.clientX + offset,
-      y: event.clientY + offset
+      y: event.clientY + offset,
     };
   }
 }

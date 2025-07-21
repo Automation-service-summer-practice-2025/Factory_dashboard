@@ -16,7 +16,7 @@
 
 .sidenav-header {
   margin-bottom: 16px;
-  
+
   h3 {
     margin: 0 0 16px 0;
     font-weight: 500;
@@ -38,7 +38,9 @@
   margin: 0 auto;
 }
 
-.info-section, .acts-section, .actions-section {
+.info-section,
+.acts-section,
+.actions-section {
   margin-bottom: 32px;
 }
 
@@ -61,7 +63,7 @@
   padding: 12px;
   background: white;
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .info-label {
@@ -115,7 +117,7 @@
   padding: 12px;
   background: white;
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   min-width: 0;
 }
 
@@ -147,11 +149,11 @@
   .manufacturer-row {
     flex-direction: column;
   }
-  
+
   .manufacturer-row:last-child .manufacturer-item {
     max-width: 100%;
   }
-  
+
   .manufacturer-item {
     width: 100%;
   }
@@ -178,7 +180,7 @@
   padding: 12px;
   background: white;
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .passport-label {
@@ -217,7 +219,8 @@
   display: table-row;
 }
 
-.acts-column, .acts-cell {
+.acts-column,
+.acts-cell {
   display: table-cell;
   padding: 12px;
   border: 1px solid #ddd;
@@ -233,7 +236,8 @@
   padding: 0;
 }
 
-.date-plan, .date-actual {
+.date-plan,
+.date-actual {
   padding: 6px 12px;
   border-bottom: 1px solid #f0f0f0;
 }
@@ -267,12 +271,12 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .header-actions {
     width: 100%;
     justify-content: space-between;
   }
-  
+
   .action-button {
     margin-right: 0;
     flex: 1;
@@ -312,7 +316,7 @@ mat-list-item.active .position-indicator {
   .position-indicator {
     width: 3px;
   }
-  
+
   mat-list-item.active .position-indicator {
     width: 5px;
   }
