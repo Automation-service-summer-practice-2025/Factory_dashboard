@@ -1,0 +1,64 @@
+<div *ngIf="station" class="page-container">
+  <div class="header">
+    <span>Производство №1 > {{ station.station_name }}</span>
+    <div class="header-button-group">
+      <button>Тех. документация</button>
+      <button>Импорт</button>
+    </div>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="working-status-col"></th>
+        <th class="name-col">Название</th>
+        <th class="block-key-status-col">Деблок</th>
+        <th class="checking-date-col">Период проверки</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let element of paginatedItems"
+        (click)="goToElementDetails(element.element_id)"
+      >
+        <td class="working-status-col">
+          <label class="status-toggle">
+            <input
+              type="checkbox"
+              [checked]="element.working_status"
+              disabled
+            />
+            <span class="slider"></span>
+          </label>
+        </td>
+        <td class="name-col">
+          {{ element.element_name }}
+        </td>
+        <td class="block-key-status-col">
+          <span class="status-badge" [class.enabled]="element.block_key_status">
+            {{ element.block_key_status ? "Выкл" : "Вкл" }}
+          </span>
+        </td>
+        <td class="checking-date-col">
+          {{ element.checking_date_start | date: "dd.MM.yyyy" }} -
+          {{ element.checking_date_finish | date: "dd.MM.yyyy" }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pagination">
+    <span class="edit-icon">✏️</span>
+    <button (click)="prevPage()" [disabled]="currentPage === 1">< Назад</button>
+    <span
+      *ngFor="let page of getPages()"
+      [class.active]="page === currentPage"
+      (click)="goToPage(page)"
+    >
+      {{ page }}
+    </span>
+    <button (click)="nextPage()" [disabled]="currentPage === totalPages">
+      Вперед >
+    </button>
+  </div>
+</div>
