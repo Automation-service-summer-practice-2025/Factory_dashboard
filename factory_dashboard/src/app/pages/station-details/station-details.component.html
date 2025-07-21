@@ -17,10 +17,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let element of paginatedItems" (click)="goToElementDetails(element.element_id)">
+      <tr
+        *ngFor="let element of paginatedItems"
+        (click)="goToElementDetails(element.element_id)"
+      >
         <td class="working-status-col">
           <label class="status-toggle">
-            <input type="checkbox" [checked]="element.working_status" disabled>
+            <input
+              type="checkbox"
+              [checked]="element.working_status"
+              disabled
+            />
             <span class="slider"></span>
           </label>
         </td>
@@ -29,11 +36,12 @@
         </td>
         <td class="block-key-status-col">
           <span class="status-badge" [class.enabled]="element.block_key_status">
-            {{ element.block_key_status ? 'Выкл' : 'Вкл' }}
+            {{ element.block_key_status ? "Выкл" : "Вкл" }}
           </span>
         </td>
         <td class="checking-date-col">
-          {{ element.checking_date_start | date:'dd.MM.yyyy' }} - {{ element.checking_date_finish | date:'dd.MM.yyyy' }}
+          {{ element.checking_date_start | date: "dd.MM.yyyy" }} -
+          {{ element.checking_date_finish | date: "dd.MM.yyyy" }}
         </td>
       </tr>
     </tbody>
@@ -41,10 +49,12 @@
 
   <div class="pagination">
     <span class="edit-icon">✏️</span>
-    <button (click)="prevPage()" [disabled]="currentPage === 1">
-      < Назад
-    </button>
-    <span *ngFor="let page of getPages()" [class.active]="page === currentPage" (click)="goToPage(page)">
+    <button (click)="prevPage()" [disabled]="currentPage === 1">< Назад</button>
+    <span
+      *ngFor="let page of getPages()"
+      [class.active]="page === currentPage"
+      (click)="goToPage(page)"
+    >
       {{ page }}
     </span>
     <button (click)="nextPage()" [disabled]="currentPage === totalPages">
