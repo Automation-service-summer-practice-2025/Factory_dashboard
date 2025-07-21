@@ -1,4 +1,4 @@
-import { StatusData } from "../models/status.model";
+import { StatusData } from '../models/status.model';
 
 export const STATUS_INFO_MOCK: StatusData[] = [
   {
@@ -18,5 +18,5 @@ export const STATUS_INFO_MOCK: StatusData[] = [
     notAck: 19,
     ack: 0,
     diag: 0,
-  }
+  },
 ];
