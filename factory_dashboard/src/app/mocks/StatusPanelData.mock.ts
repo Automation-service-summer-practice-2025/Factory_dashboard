@@ -1,6 +1,14 @@
 import { StatusPanelData } from '../models/status-panel.model';
+import { WeatherData } from '../models/status-panel.model';
 
-export const STATUS_INFO_MOCK: StatusPanelData[] = [
+export const WEATHER_DATA_MOCK: WeatherData = {
+  temperature: 23.8,
+  windSpeed: 2,
+  windDirection: 257,
+  pressure: 746.8,
+};
+
+export const STATUS_PANEL_DATA_MOCK: StatusPanelData[] = [
   {
     title: 'Загазованность',
     numUnquotedEvents: 2,
