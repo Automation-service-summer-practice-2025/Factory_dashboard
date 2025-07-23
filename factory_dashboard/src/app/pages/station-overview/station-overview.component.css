@@ -36,6 +36,14 @@
   gap: 10px;
 }
 
+.header-button-group button.active {
+  background-color: #4caf50;
+}
+
+.header-button-group button.active::after {
+  background-color: white;
+}
+
 /* таблица */
 .table {
   width: 100%;
