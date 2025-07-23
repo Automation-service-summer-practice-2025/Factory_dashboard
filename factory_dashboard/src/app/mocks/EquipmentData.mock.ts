@@ -15,7 +15,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     range_measurement: '0-50% 4КПРC6H14',
     block_key_status: true,
     working_status: true,
-    documents: [
+    acts: [
       {
         id: 1011,
         documentName:
@@ -54,7 +54,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     range_measurement: '0-100% 2КПРC3H8',
     block_key_status: false,
     working_status: true,
-    documents: [
+    acts: [
       {
         id: 1021,
         documentName:
@@ -103,7 +103,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     range_measurement: '0-10% 1КПРC2H6',
     block_key_status: true,
     working_status: false,
-    documents: [
+    acts: [
       {
         id: 1031,
         documentName:
@@ -162,7 +162,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     range_measurement: '0-60% 3КПРC5H12',
     block_key_status: false,
     working_status: true,
-    documents: [
+    acts: [
       {
         id: 2011,
         documentName:
@@ -201,7 +201,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     range_measurement: '0-200°C',
     block_key_status: true,
     working_status: true,
-    documents: [
+    acts: [
       {
         id: 2021,
         documentName:
@@ -230,7 +230,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     range_measurement: '0-10 bar',
     block_key_status: false,
     working_status: false,
-    documents: [
+    acts: [
       {
         id: 2031,
         documentName:
@@ -319,7 +319,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     range_measurement: '0-1000 kPa',
     block_key_status: true,
     working_status: true,
-    documents: [
+    acts: [
       {
         id: 3011,
         documentName:
@@ -358,7 +358,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     range_measurement: '0-5 мкм',
     block_key_status: false,
     working_status: true,
-    documents: [
+    acts: [
       {
         id: 3021,
         documentName:
@@ -387,7 +387,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     range_measurement: '0-30A',
     block_key_status: true,
     working_status: false,
-    documents: [
+    acts: [
       {
         id: 3031,
         documentName:

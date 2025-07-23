@@ -1,4 +1,4 @@
-export interface Documents {
+export interface Acts {
   id: number;
   documentName: string;
   repairType: string;
