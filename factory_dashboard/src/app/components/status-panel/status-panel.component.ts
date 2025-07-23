@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StatusData } from '../../models/status.model';
 import { STATUS_INFO_MOCK } from '../../mocks/StatusInfo.mock';
-import { Weather } from '../../models/weather.model';
-import { WEATHER_MOCK } from '../../mocks/Weather.mock';
+import { WeatherData } from '../../models/status-panel.model';
+import { WEATHER_DATA_MOCK } from '../../mocks/StatusPanel.mock';
 
 @Component({
   selector: 'app-status-panel',
@@ -18,13 +18,13 @@ export class StatusPanelComponent {
   }
 
   statusInfo!: StatusData[];
-  weather!: Weather;
+  weatherData!: WeatherData;
 
   loadStatusInfoMockData() {
     this.statusInfo = [...STATUS_INFO_MOCK];
   }
 
   loadWeatherMockData() {
-    this.weather = { ...WEATHER_MOCK };
+    this.weatherData = { ...WEATHER_DATA_MOCK };
   }
 }
