@@ -1,8 +1,12 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import ImageMap from 'image-map';
-import { MapArea, TooltipData, Position } from '../../models/factory.model';
-import { MAP_AREAS_MOCK } from '../../mocks/MapArea.mock';
+import {
+  StationModel,
+  TooltipData,
+  Position,
+} from '../../models/factory.model';
+import { STATIONS_DATA_MOCK } from '../../mocks/StationsData.mock';
 
 @Component({
   selector: 'app-factory-map',
@@ -12,9 +16,11 @@ import { MAP_AREAS_MOCK } from '../../mocks/MapArea.mock';
 })
 export class FactoryMap {
   @ViewChild('mapImage') mapImage!: ElementRef<HTMLImageElement>;
+  stations!: StationModel[];
+  activeTooltip: TooltipData | null = null;
+  tooltipPosition: Position = { x: 0, y: 0 };
 
   ngOnInit(): void {
-    // this.loadMapData();
     this.loadMapMockData();
   }
 
@@ -22,20 +28,14 @@ export class FactoryMap {
     ImageMap('img[usemap]');
   }
 
-  mapAreas!: MapArea[];
-
   loadMapMockData() {
-    this.mapAreas = [...MAP_AREAS_MOCK];
+    this.stations = [...STATIONS_DATA_MOCK];
   }
 
-  activeTooltip: TooltipData | null = null;
-  tooltipPosition: Position = { x: 0, y: 0 };
-
   // Обработка наведения на область
-  onAreaHover(area: MapArea, event: MouseEvent): void {
+  onAreaHover(station: StationModel, event: MouseEvent): void {
     this.activeTooltip = {
-      station_name: area.station_name,
-      description: area.description,
+      station_name: station.name,
     };
     this.updateTooltipPosition(event);
   }

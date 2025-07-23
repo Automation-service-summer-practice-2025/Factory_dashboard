@@ -8,8 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
-import { API_ELEMENTS_MOCK } from '../../mocks/Elements.mock';
-import { Elements } from '../../models/elements.model';
+import { STATION_EQUIPMENT_DATA_MOCK } from '../../mocks/StaionEquipmentData.mock';
+import { StationEquipment } from '../../models/factory.model';
 
 @Component({
   standalone: true,
@@ -32,9 +32,9 @@ import { Elements } from '../../models/elements.model';
 export class StationDetailsComponent implements OnInit {
   searchTerm: string = '';
 
-  elements!: Elements[];
-  filteredElements: Elements[] = [];
-  selectedElements: Elements | null = null;
+  elements!: StationEquipment[];
+  filteredElements: StationEquipment[] = [];
+  selectedElements: StationEquipment | null = null;
 
   ngOnInit(): void {
     this.loadElementsMockData();
@@ -58,12 +58,12 @@ export class StationDetailsComponent implements OnInit {
     }
   }
 
-  selectElements(element: Elements): void {
+  selectElements(element: StationEquipment): void {
     this.selectedElements = element;
   }
 
   loadElementsMockData() {
-    this.elements = [...API_ELEMENTS_MOCK];
+    this.elements = [...STATION_EQUIPMENT_DATA_MOCK];
   }
 
   getNextControlDate(

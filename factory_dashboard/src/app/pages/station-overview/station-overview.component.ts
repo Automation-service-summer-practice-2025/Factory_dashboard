@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Station } from '../../models/station.model';
 import { CommonModule } from '@angular/common';
+
+import { StationModel, StationEquipment } from '../../models/factory.model';
+import { STATIONS_DATA_MOCK } from '../../mocks/StationsData.mock';
+import { STATION_EQUIPMENT_DATA_MOCK } from '../../mocks/StaionEquipmentData.mock';
 
 @Component({
   selector: 'app-station-overview',
@@ -10,7 +13,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./station-overview.component.css'],
 })
 export class StationOverviewComponent implements OnInit {
-  station!: Station;
+  station: StationModel | null = null;
+  stationEquipment: StationEquipment[] = [];
   currentPage = 1;
   itemsPerPage = 10;
 
@@ -21,274 +25,25 @@ export class StationOverviewComponent implements OnInit {
 
   ngOnInit(): void {
     const stationId = Number(this.route.snapshot.paramMap.get('station_id'));
-    // this.loadStationData(stationId);
-    this.loadStationMockData(stationId);
+    this.loadMockData(stationId);
   }
 
-  loadStationMockData(stationId: number) {
-    this.station = {
-      station_id: 1,
-      station_name: 'АТ-ВБ',
-      station_elements: [
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 102,
-          element_name: 'Клапан K-45',
-          working_status: true,
-          checking_date_start: '2024-02-15T10:00:00',
-          checking_date_finish: '2024-02-20T16:00:00',
-          block_key_status: false,
-        },
-        {
-          element_id: 103,
-          element_name: 'Датчик Д-12',
-          working_status: false,
-          checking_date_start: '2024-03-20T11:00:00',
-          checking_date_finish: '2024-03-25T15:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-        {
-          element_id: 101,
-          element_name: 'Насос H-21',
-          working_status: true,
-          checking_date_start: '2024-01-10T09:00:00',
-          checking_date_finish: '2024-01-15T17:00:00',
-          block_key_status: true,
-        },
-      ],
-    };
+  loadMockData(stationId: number) {
+    this.station =
+      STATIONS_DATA_MOCK.find((station) => station.id === stationId) || null;
+
+    this.stationEquipment = STATION_EQUIPMENT_DATA_MOCK.filter(
+      (equipment) => equipment.station_id === stationId,
+    );
   }
 
   get totalPages(): number {
-    return Math.ceil(this.station.station_elements.length / this.itemsPerPage);
+    return Math.ceil(this.stationEquipment.length / this.itemsPerPage);
   }
 
   get paginatedItems(): any[] {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
-    return this.station.station_elements.slice(
+    return this.stationEquipment.slice(
       startIndex,
       startIndex + this.itemsPerPage,
     );
@@ -319,6 +74,6 @@ export class StationOverviewComponent implements OnInit {
   }
 
   goToElementDetails(elementId: number): void {
-    this.router.navigate([`/station/${this.station.station_id}/${elementId}`]);
+    this.router.navigate([`/station/${this.station?.id}/${elementId}`]);
   }
 }
