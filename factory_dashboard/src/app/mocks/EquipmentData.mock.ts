@@ -39,6 +39,8 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipment[] = [
         actualEndDate: new Date('2025-07-25T12:41:20'),
       },
     ],
+    checking_date_start: '2024-01-15T00:00:00',
+    checking_date_end: '2024-01-20T00:00:00',
   },
   {
     element_id: 102,
@@ -88,6 +90,8 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipment[] = [
         actualEndDate: new Date('2025-07-25T12:41:20'),
       },
     ],
+    checking_date_start: '2024-01-15T00:00:00',
+    checking_date_end: '2024-01-20T00:00:00',
   },
   {
     element_id: 103,
@@ -147,6 +151,8 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipment[] = [
         actualEndDate: new Date('2025-07-25T12:41:20'),
       },
     ],
+    checking_date_start: '2024-01-15T00:00:00',
+    checking_date_end: '2024-01-20T00:00:00',
   },
   {
     element_id: 201,
@@ -186,6 +192,8 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipment[] = [
         actualEndDate: new Date('2025-07-25T12:41:20'),
       },
     ],
+    checking_date_start: '2024-01-15T00:00:00',
+    checking_date_end: '2024-01-20T00:00:00',
   },
   {
     element_id: 202,
@@ -215,6 +223,8 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipment[] = [
         actualEndDate: new Date('2025-01-21T08:28:43'),
       },
     ],
+    checking_date_start: '2024-01-15T00:00:00',
+    checking_date_end: '2024-01-20T00:00:00',
   },
   {
     element_id: 203,
@@ -304,6 +314,8 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipment[] = [
         actualEndDate: new Date('2025-07-25T12:41:20'),
       },
     ],
+    checking_date_start: '2024-01-15T00:00:00',
+    checking_date_end: '2024-01-20T00:00:00',
   },
   {
     element_id: 301,
@@ -343,6 +355,8 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipment[] = [
         actualEndDate: new Date('2025-01-21T08:28:43'),
       },
     ],
+    checking_date_start: '2024-01-15T00:00:00',
+    checking_date_end: '2024-01-20T00:00:00',
   },
   {
     element_id: 302,
@@ -372,6 +386,8 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipment[] = [
         actualEndDate: new Date('2025-01-21T08:28:43'),
       },
     ],
+    checking_date_start: '2024-01-15T00:00:00',
+    checking_date_end: '2024-01-20T00:00:00',
   },
   {
     element_id: 303,
@@ -461,5 +477,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipment[] = [
         actualEndDate: new Date('2025-07-25T12:41:20'),
       },
     ],
+    checking_date_start: '2024-01-15T00:00:00',
+    checking_date_end: '2024-01-20T00:00:00',
   },
 ];

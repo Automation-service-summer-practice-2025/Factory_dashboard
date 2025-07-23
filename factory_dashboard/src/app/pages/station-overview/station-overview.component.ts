@@ -41,7 +41,7 @@ export class StationOverviewComponent implements OnInit {
     return Math.ceil(this.stationEquipment.length / this.itemsPerPage);
   }
 
-  get paginatedItems(): any[] {
+  get paginatedEquipments(): any[] {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;
     return this.stationEquipment.slice(
       startIndex,

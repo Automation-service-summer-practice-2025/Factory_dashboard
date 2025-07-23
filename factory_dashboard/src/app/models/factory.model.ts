@@ -52,4 +52,6 @@ export interface StationEquipment {
     working_status: boolean;
   };
   documents?: Documents[];
+  checking_date_start: string;
+  checking_date_end: string;
 }
