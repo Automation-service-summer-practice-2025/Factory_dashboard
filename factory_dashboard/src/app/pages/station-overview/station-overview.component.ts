@@ -73,7 +73,7 @@ export class StationOverviewComponent implements OnInit {
     }
   }
 
-  goToElementDetails(elementId: number): void {
-    this.router.navigate([`/station/${this.station?.id}/${elementId}`]);
+  goToElementDetails(equipmentId: number): void {
+    this.router.navigate([`/station/${this.station?.id}/${equipmentId}`]);
   }
 }

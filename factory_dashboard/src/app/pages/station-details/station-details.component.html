@@ -24,8 +24,8 @@
     <mat-nav-list>
       <mat-list-item
         *ngFor="let position of filteredElements"
-        (click)="selectElements(position)"
-        [class.active]="position.element_id === selectedElements?.element_id"
+        (click)="selectEquipment(position)"
+        [class.active]="position.element_id === selectedEquipment?.element_id"
       >
         <div
           class="position-indicator"
@@ -40,9 +40,9 @@
   <!-- Основное содержимое -->
   <mat-sidenav-content class="content">
     <!-- Здесь будет основной контент экрана с деталями позиции -->
-    <div *ngIf="selectElements" class="position-details">
+    <div *ngIf="selectEquipment" class="position-details">
       <div class="header-section">
-        <h2>Технологический № {{ selectedElements?.element_name }}</h2>
+        <h2>Технологический № {{ selectedEquipment?.element_name }}</h2>
 
         <div class="header-actions">
           <button mat-raised-button color="primary" class="action-button">
@@ -61,14 +61,14 @@
           <div class="info-item">
             <span class="info-label">Статус:</span>
             <span class="info-value">{{
-              selectedElements?.params?.block_key_status
+              selectedEquipment?.params?.block_key_status
             }}</span>
           </div>
 
           <div class="info-item">
             <span class="info-label">Последний контроль:</span>
             <span class="info-value">{{
-              selectedElements?.params?.last_metrological_control
+              selectedEquipment?.params?.last_metrological_control
                 | date: "dd.MM.yyyy"
             }}</span>
           </div>
@@ -77,8 +77,8 @@
             <span class="info-label">Следующий контроль:</span>
             <span class="info-value">{{
               getNextControlDate(
-                selectedElements?.params?.last_metrological_control,
-                selectedElements?.params?.interval_check
+                selectedEquipment?.params?.last_metrological_control,
+                selectedEquipment?.params?.interval_check
               ) | date: "dd.MM.yyyy"
             }}</span>
           </div>
@@ -86,7 +86,7 @@
           <div class="info-item">
             <span class="info-label">Последняя проверка:</span>
             <span class="info-value">{{
-              selectedElements?.params?.last_check | date: "dd.MM.yyyy"
+              selectedEquipment?.params?.last_check | date: "dd.MM.yyyy"
             }}</span>
           </div>
         </div>
@@ -99,7 +99,7 @@
           <div class="manufacturer-item">
             <span class="manufacturer-label">Изготовитель:</span>
             <span class="manufacturer-value">{{
-              selectedElements?.params?.manufacturer
+              selectedEquipment?.params?.manufacturer
             }}</span>
           </div>
         </div>
@@ -109,7 +109,7 @@
           <div class="manufacturer-item">
             <span class="manufacturer-label">Номер паспорта:</span>
             <span class="manufacturer-value">{{
-              selectedElements?.params?.passport
+              selectedEquipment?.params?.passport
             }}</span>
           </div>
         </div>
@@ -119,7 +119,7 @@
           <div class="manufacturer-item">
             <span class="manufacturer-label">Заводской номер:</span>
             <span class="manufacturer-value">{{
-              selectedElements?.params?.factory
+              selectedEquipment?.params?.factory
             }}</span>
           </div>
         </div>
@@ -133,14 +133,14 @@
           <div class="passport-item">
             <span class="passport-label">Номер свидетельства ФГИС Аршин:</span>
             <span class="passport-value">{{
-              selectedElements?.params?.certificate
+              selectedEquipment?.params?.certificate
             }}</span>
           </div>
 
           <div class="passport-item">
             <span class="passport-label">Межповерочный интервал:</span>
             <span class="passport-value">{{
-              selectedElements?.params?.interval_check
+              selectedEquipment?.params?.interval_check
             }}</span>
           </div>
 
@@ -149,7 +149,7 @@
               >Диапазон измерений НКПР компонента:</span
             >
             <span class="passport-value">{{
-              selectedElements?.params?.range_measurement
+              selectedEquipment?.params?.range_measurement
             }}</span>
           </div>
         </div>
@@ -167,7 +167,10 @@
             <div class="acts-column">Дата окончания</div>
           </div>
 
-          <div class="acts-row" *ngFor="let act of selectedElements?.documents">
+          <div
+            class="acts-row"
+            *ngFor="let act of selectedEquipment?.documents"
+          >
             <div class="acts-cell">{{ act.documentName }}</div>
             <div class="acts-cell">{{ act.repairType }}</div>
 

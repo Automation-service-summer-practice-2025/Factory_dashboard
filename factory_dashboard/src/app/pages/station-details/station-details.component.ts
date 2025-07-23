@@ -5,6 +5,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+
+import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
@@ -32,38 +34,47 @@ import { StationEquipment } from '../../models/factory.model';
 export class StationDetailsComponent implements OnInit {
   searchTerm: string = '';
 
-  elements!: StationEquipment[];
+  stationEquipment!: StationEquipment[];
   filteredElements: StationEquipment[] = [];
-  selectedElements: StationEquipment | null = null;
+  selectedEquipment: StationEquipment | null = null;
+
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.loadElementsMockData();
+    const stationId = Number(this.route.snapshot.paramMap.get('station_id'));
+    const equipmentId = Number(
+      this.route.snapshot.paramMap.get('equipment_id'),
+    );
 
-    this.filteredElements = [...this.elements];
+    this.loadElementsMockData(stationId);
 
-    if (this.filteredElements.length > 0) {
-      this.selectedElements = this.filteredElements[0];
-    }
+    this.filteredElements = [...this.stationEquipment];
+    this.selectedEquipment =
+      this.stationEquipment.find(
+        (equipment) => equipment.element_id === equipmentId,
+      ) || null;
+  }
+
+  loadElementsMockData(stationId: number): void {
+    this.stationEquipment = STATION_EQUIPMENT_DATA_MOCK.filter(
+      (equipment) => equipment.station_id === stationId,
+    );
   }
 
   filterPositions(): void {
     if (!this.searchTerm) {
-      this.filteredElements = [...this.elements];
+      this.filteredElements = [...this.stationEquipment];
     } else {
-      this.filteredElements = this.elements.filter((element) =>
-        element.element_name
+      this.filteredElements = this.stationEquipment.filter((stationEquipment) =>
+        stationEquipment.element_name
           .toLowerCase()
           .includes(this.searchTerm.toLowerCase()),
       );
     }
   }
 
-  selectElements(element: StationEquipment): void {
-    this.selectedElements = element;
-  }
-
-  loadElementsMockData() {
-    this.elements = [...STATION_EQUIPMENT_DATA_MOCK];
+  selectEquipment(equipment: StationEquipment): void {
+    this.selectedEquipment = equipment;
   }
 
   getNextControlDate(

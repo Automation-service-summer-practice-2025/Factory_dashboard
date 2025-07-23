@@ -5,7 +5,7 @@ import { LoadWindowComponent } from './pages/load-window/load-window.component';
 
 export const routes: Routes = [
   {
-    path: 'station/:station_id/:element_id',
+    path: 'station/:station_id/:equipment_id',
     component: StationDetailsComponent,
   },
   {
