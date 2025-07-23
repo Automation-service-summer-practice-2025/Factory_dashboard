@@ -17,7 +17,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
     working_status: true,
     checking_date_start: '2024-01-15T00:00:00',
     checking_date_end: '2024-01-20T00:00:00',
-    tab_id: 'SBPS' // Система безопасности и противоаварийной защиты
+    tab_id: 'SBPS'
   },
   {
     element_id: 102,
@@ -35,7 +35,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
     working_status: true,
     checking_date_start: '2024-01-15T00:00:00',
     checking_date_end: '2024-01-20T00:00:00',
-    tab_id: 'DZ' // Датчики загазованности
+    tab_id: 'DZ'
   },
   {
     element_id: 103,
@@ -53,7 +53,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
     working_status: false,
     checking_date_start: '2024-01-15T00:00:00',
     checking_date_end: '2024-01-20T00:00:00',
-    tab_id: 'UnK' // Деблокировочные ключи
+    tab_id: 'UnK'
   },
   {
     element_id: 201,
