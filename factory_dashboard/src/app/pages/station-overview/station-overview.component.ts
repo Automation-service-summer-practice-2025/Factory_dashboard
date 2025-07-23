@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { APIService } from '../../services/api.service';
 import { Station } from '../../models/station.model';
 import { CommonModule } from '@angular/common';
-import { TechDockComponent } from './tech-dock/tech-dock.component'
+import { TechDockComponent } from './tech-dock/tech-dock.component';
 
 @Component({
   selector: 'app-station-overview',
