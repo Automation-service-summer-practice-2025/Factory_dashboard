@@ -8,7 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
-import { STATION_EQUIPMENT_DATA_MOCK } from '../../mocks/StaionEquipmentData.mock';
+import { STATION_EQUIPMENT_DATA_MOCK } from '../../mocks/EquipmentData.mock';
 import { StationEquipment } from '../../models/factory.model';
 
 @Component({

@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { StationModel, StationEquipment } from '../../models/factory.model';
 import { STATIONS_DATA_MOCK } from '../../mocks/StationsData.mock';
-import { STATION_EQUIPMENT_DATA_MOCK } from '../../mocks/StaionEquipmentData.mock';
+import { STATION_EQUIPMENT_DATA_MOCK } from '../../mocks/EquipmentData.mock';
 
 @Component({
   selector: 'app-station-overview',
