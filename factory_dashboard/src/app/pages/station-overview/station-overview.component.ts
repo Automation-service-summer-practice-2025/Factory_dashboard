@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TechDockComponent } from './tech-dock/tech-dock.component';
 
 import {
   StationModel,
@@ -11,7 +12,7 @@ import { STATION_EQUIPMENTS_DATA_MOCK } from '../../mocks/StationEquipmentsData.
 
 @Component({
   selector: 'app-station-overview',
-  imports: [CommonModule],
+  imports: [CommonModule, TechDockComponent],
   templateUrl: './station-overview.component.html',
   styleUrls: ['./station-overview.component.css'],
 })
