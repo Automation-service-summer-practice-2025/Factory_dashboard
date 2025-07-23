@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { STATION_EQUIPMENT_DATA_MOCK } from '../../mocks/EquipmentData.mock';
-import { StationEquipment } from '../../models/factory.model';
+import { StationEquipmentModel } from '../../models/factory.model';
 
 @Component({
   standalone: true,
@@ -34,9 +34,9 @@ import { StationEquipment } from '../../models/factory.model';
 export class StationDetailsComponent implements OnInit {
   searchTerm: string = '';
 
-  stationEquipment!: StationEquipment[];
-  filteredElements: StationEquipment[] = [];
-  selectedEquipment: StationEquipment | null = null;
+  stationEquipment!: StationEquipmentModel[];
+  filteredElements: StationEquipmentModel[] = [];
+  selectedEquipment: StationEquipmentModel | null = null;
 
   constructor(private route: ActivatedRoute) {}
 
@@ -73,7 +73,7 @@ export class StationDetailsComponent implements OnInit {
     }
   }
 
-  selectEquipment(equipment: StationEquipment): void {
+  selectEquipment(equipment: StationEquipmentModel): void {
     this.selectedEquipment = equipment;
   }
 

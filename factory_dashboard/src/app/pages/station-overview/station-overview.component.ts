@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-import { StationModel, StationEquipment } from '../../models/factory.model';
+import {
+  StationModel,
+  StationEquipmentModel,
+} from '../../models/factory.model';
 import { STATIONS_DATA_MOCK } from '../../mocks/StationsData.mock';
 import { STATION_EQUIPMENT_DATA_MOCK } from '../../mocks/EquipmentData.mock';
 
@@ -14,7 +17,7 @@ import { STATION_EQUIPMENT_DATA_MOCK } from '../../mocks/EquipmentData.mock';
 })
 export class StationOverviewComponent implements OnInit {
   station: StationModel | null = null;
-  stationEquipment: StationEquipment[] = [];
+  stationEquipment: StationEquipmentModel[] = [];
   currentPage = 1;
   itemsPerPage = 10;
 

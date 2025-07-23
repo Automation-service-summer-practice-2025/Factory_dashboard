@@ -1,13 +1,5 @@
 import { Documents } from './documents.model';
 
-export interface MapArea {
-  station_id: number;
-  station_name: string;
-  coords: string;
-  shape: 'rect' | 'poly' | 'circle';
-  description?: string;
-}
-
 export interface TooltipData {
   station_name: string;
   description?: string;
@@ -18,15 +10,6 @@ export interface Position {
   y: number;
 }
 
-// export interface StationElement {
-//   element_id: number;
-//   element_name: string;
-//   working_status: boolean;
-//   checking_date_start: string;
-//   checking_date_finish: string;
-//   block_key_status: boolean;
-// }
-
 export interface StationModel {
   id: number;
   name: string;
@@ -35,7 +18,7 @@ export interface StationModel {
   factoryId: number;
 }
 
-export interface StationEquipment {
+export interface StationEquipmentModel {
   element_id: number;
   element_name: string;
   station_id: number;

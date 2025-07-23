@@ -13,5 +13,5 @@ export interface StationEquipmentModel {
   block_key_status: boolean;
   working_status: boolean;
   checking_date_start: string;
-  checking_date_finish: string;
+  checking_date_end: string;
 }

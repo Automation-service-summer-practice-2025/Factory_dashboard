@@ -1,6 +1,6 @@
-import { StationEquipment } from '../models/factory.model';
+import { StationEquipmentModel } from '../models/factory.model';
 
-export const STATION_EQUIPMENT_DATA_MOCK: StationEquipment[] = [
+export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 101,
     element_name: 'Насос H-21',
