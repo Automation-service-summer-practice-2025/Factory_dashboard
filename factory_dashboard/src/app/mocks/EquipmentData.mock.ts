@@ -18,8 +18,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     acts: [
       {
         id: 1011,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -28,8 +27,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 1012,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
+        name: 'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-07-26T08:00:00'),
         actualStartDate: new Date('2025-07-25T12:04:53'),
@@ -57,8 +55,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     acts: [
       {
         id: 1021,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -67,8 +64,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 1022,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
+        name: 'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-07-26T08:00:00'),
         actualStartDate: new Date('2025-07-25T12:04:53'),
@@ -77,8 +73,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 1023,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
+        name: 'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-07-26T08:00:00'),
         actualStartDate: new Date('2025-07-25T12:04:53'),
@@ -106,8 +101,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     acts: [
       {
         id: 1031,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -116,8 +110,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 1032,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -126,8 +119,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 1033,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
+        name: 'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-07-26T08:00:00'),
         actualStartDate: new Date('2025-07-25T12:04:53'),
@@ -136,8 +128,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 1034,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
+        name: 'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-07-26T08:00:00'),
         actualStartDate: new Date('2025-07-25T12:04:53'),
@@ -165,8 +156,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     acts: [
       {
         id: 2011,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -175,8 +165,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 2012,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
+        name: 'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-07-26T08:00:00'),
         actualStartDate: new Date('2025-07-25T12:04:53'),
@@ -204,8 +193,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     acts: [
       {
         id: 2021,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -233,8 +221,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     acts: [
       {
         id: 2031,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -243,8 +230,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 2032,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -253,8 +239,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 2033,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
+        name: 'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-07-26T08:00:00'),
         actualStartDate: new Date('2025-07-25T12:04:53'),
@@ -263,8 +248,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 2034,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
+        name: 'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-07-26T08:00:00'),
         actualStartDate: new Date('2025-07-25T12:04:53'),
@@ -273,8 +257,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 2035,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -283,8 +266,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 2036,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
+        name: 'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-07-26T08:00:00'),
         actualStartDate: new Date('2025-07-25T12:04:53'),
@@ -293,8 +275,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 2037,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
+        name: 'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-07-26T08:00:00'),
         actualStartDate: new Date('2025-07-25T12:04:53'),
@@ -322,8 +303,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     acts: [
       {
         id: 3011,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -332,8 +312,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 3012,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -361,8 +340,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     acts: [
       {
         id: 3021,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -390,8 +368,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
     acts: [
       {
         id: 3031,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -400,8 +377,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 3032,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -410,8 +386,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 3033,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
+        name: 'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-07-26T08:00:00'),
         actualStartDate: new Date('2025-07-25T12:04:53'),
@@ -420,8 +395,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 3034,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
+        name: 'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-07-26T08:00:00'),
         actualStartDate: new Date('2025-07-25T12:04:53'),
@@ -430,8 +404,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 3035,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
+        name: 'Акт о выполнении этапа работ ЦМНАВ25-000376 от 22.01.2025 09:48:48',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-01-24T08:00:00'),
         actualStartDate: new Date('2025-01-21T07:51:56'),
@@ -440,8 +413,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 3036,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
+        name: 'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-07-26T08:00:00'),
         actualStartDate: new Date('2025-07-25T12:04:53'),
@@ -450,8 +422,7 @@ export const STATION_EQUIPMENT_DATA_MOCK: StationEquipmentModel[] = [
       },
       {
         id: 3037,
-        documentName:
-          'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
+        name: 'Акт о выполнении этапа работ ЦМНАВ24-004246 от 29.07.2025 19:19:23',
         repairType: 'ТО-4',
         plannedStartDate: new Date('2025-07-26T08:00:00'),
         actualStartDate: new Date('2025-07-25T12:04:53'),

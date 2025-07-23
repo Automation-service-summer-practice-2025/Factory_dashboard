@@ -1,6 +1,6 @@
 export interface Acts {
   id: number;
-  documentName: string;
+  name: string;
   repairType: string;
   plannedStartDate: Date;
   actualStartDate: Date | null;
