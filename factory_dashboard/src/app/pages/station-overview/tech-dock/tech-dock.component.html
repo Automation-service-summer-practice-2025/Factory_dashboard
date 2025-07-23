@@ -1,8 +1,10 @@
 <mat-form-field appearance="fill">
-  <mat-label>Тех. документация</mat-label>
-  <mat-select [(value)]="selectedDocument" (selectionChange)="onDocumentChange($event.value)">
-    <mat-option *ngFor="let doc of documents" [value]="doc.id">
+  <select matNativeControl 
+          [(ngModel)]="selectedDocument" 
+          (change)="onDocumentChange($event)">
+    <option value="" hidden selected>Тех. документация</option>
+    <option *ngFor="let doc of documents" [value]="doc.id">
       {{ doc.name }}
-    </mat-option>
-  </mat-select>
+    </option>
+  </select>
 </mat-form-field>

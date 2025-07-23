@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   standalone: true,
   selector: 'app-tech-dock',
-  imports: [CommonModule, MatSelectModule],
+  imports: [    
+    CommonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
+  ],
   templateUrl: './tech-dock.component.html',
   styleUrl: './tech-dock.component.css'
 })
@@ -22,35 +29,39 @@ export class TechDockComponent {
 
   constructor(private http: HttpClient) {}
 
-  onDocumentChange(documentId: string): void {
-    const selectedDoc = this.documents.find(doc => doc.id === documentId);
-    if (selectedDoc) {
-      this.downloadFile(selectedDoc.fileName);
+  onDocumentChange(event: Event): void {
+    const selectElement = event.target as HTMLSelectElement;
+    const documentId = selectElement.value;
+    
+    if (documentId) {
+      const selectedDoc = this.documents.find(doc => doc.id === documentId);
+      if (selectedDoc) {
+        this.downloadFile(selectedDoc.fileName);
+      }
+      this.selectedDocument = '';
+      selectElement.value = '';
     }
-    this.selectedDocument = '';
   }
 
   private downloadFile(fileName: string): void {
     const fileUrl = `assets/tech-documents/${fileName}`;
     
-    this.http.get(fileUrl, { responseType: 'blob' }).subscribe(
-      (blob: Blob) => {
-        // Создаем временную ссылку для скачивания
+    this.http.get(fileUrl, { responseType: 'blob' }).subscribe({
+      next: (blob: Blob) => {
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
+
         a.href = url;
         a.download = fileName;
         document.body.appendChild(a);
         a.click();
         
-        // Очищаем память
         window.URL.revokeObjectURL(url);
         document.body.removeChild(a);
       },
-      (error) => {
+      error: (error) => {
         console.error('Ошибка при скачивании файла:', error);
-        // Здесь можно добавить уведомление для пользователя
       }
-    );
+    });
   }
 }
