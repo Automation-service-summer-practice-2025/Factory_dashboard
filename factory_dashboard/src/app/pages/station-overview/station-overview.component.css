@@ -34,6 +34,12 @@
 .header-button-group {
   display: flex;
   gap: 10px;
+  align-items: flex-start;
+}
+
+.header-button-group button {
+  height: 56px;
+  box-sizing: border-box;
 }
 
 /* таблица */

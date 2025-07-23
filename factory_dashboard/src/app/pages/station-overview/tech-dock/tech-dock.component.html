@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill">
+  <mat-label>Тех. документация</mat-label>
+  <mat-select [(value)]="selectedDocument" (selectionChange)="onDocumentChange($event.value)">
+    <mat-option *ngFor="let doc of documents" [value]="doc.id">
+      {{ doc.name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

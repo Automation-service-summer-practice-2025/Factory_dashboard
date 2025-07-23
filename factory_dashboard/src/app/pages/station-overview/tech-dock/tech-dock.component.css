@@ -1,0 +1,19 @@
+mat-form-field.mat-mdc-form-field {
+  --mdc-filled-text-field-container-color: #2196f3;
+  --mdc-filled-text-field-hover-container-color: #1e88e5;
+  --mdc-filled-text-field-focus-container-color: #1976d2;
+  --mdc-filled-text-field-label-text-color: white;
+  --mdc-filled-text-field-input-text-color: white; 
+  --mat-select-enabled-trigger-text-color: white;
+  width: 400px;
+}
+
+.mat-mdc-select-panel {
+  margin-top: 2px !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+}
+
+.mat-mdc-select-min-line {
+    color: white;
+}
