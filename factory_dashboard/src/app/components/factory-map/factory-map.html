@@ -8,11 +8,11 @@
 
 <map name="image-map">
   <area
-    *ngFor="let area of mapAreas"
-    [attr.href]="'station/' + area.station_id"
-    [attr.coords]="area.coords"
-    [attr.shape]="area.shape"
-    (mouseenter)="onAreaHover(area, $event)"
+    *ngFor="let station of stations"
+    [attr.href]="'station/' + station.id"
+    [attr.coords]="station.coordinates"
+    [attr.shape]="station.shape"
+    (mouseenter)="onAreaHover(station, $event)"
     (mouseleave)="onAreaLeave()"
   />
 </map>

@@ -5,12 +5,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+
+import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
-import { APIService } from '../../services/api.service';
-import { API_ELEMENTS_MOCK } from '../../mocks/Elements.mock';
-import { Elements } from '../../models/elements.model';
+import { STATION_EQUIPMENTS_DATA_MOCK } from '../../mocks/StationEquipmentsData.mock';
+import { StationEquipmentModel } from '../../models/factory.model';
+import { EquipmentActModel } from '../../models/act.model';
+import { EQUIPMENT_ACTS_DATA_MOCK } from '../../mocks/EquipmentActsData.mock';
 
 @Component({
   standalone: true,
@@ -33,52 +36,47 @@ import { Elements } from '../../models/elements.model';
 export class StationDetailsComponent implements OnInit {
   searchTerm: string = '';
 
-  elements!: Elements[];
-  filteredElements: Elements[] = [];
-  selectedElements: Elements | null = null;
+  stationEquipment!: StationEquipmentModel[];
+  filteredElements: StationEquipmentModel[] = [];
+  selectedEquipment: StationEquipmentModel | null = null;
 
-  constructor(private apiService: APIService) {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.loadElementsMockData();
+    const stationId = Number(this.route.snapshot.paramMap.get('station_id'));
+    const equipmentId = Number(
+      this.route.snapshot.paramMap.get('equipment_id'),
+    );
 
-    this.filteredElements = [...this.elements];
+    this.loadElementsMockData(stationId);
 
-    if (this.filteredElements.length > 0) {
-      this.selectedElements = this.filteredElements[0];
-    }
+    this.filteredElements = [...this.stationEquipment];
+    this.selectedEquipment =
+      this.stationEquipment.find(
+        (equipment) => equipment.element_id === equipmentId,
+      ) || null;
+  }
+
+  loadElementsMockData(stationId: number): void {
+    this.stationEquipment = STATION_EQUIPMENTS_DATA_MOCK.filter(
+      (equipment) => equipment.station_id === stationId,
+    );
   }
 
   filterPositions(): void {
     if (!this.searchTerm) {
-      this.filteredElements = [...this.elements];
+      this.filteredElements = [...this.stationEquipment];
     } else {
-      this.filteredElements = this.elements.filter((element) =>
-        element.element_name
+      this.filteredElements = this.stationEquipment.filter((stationEquipment) =>
+        stationEquipment.element_name
           .toLowerCase()
           .includes(this.searchTerm.toLowerCase()),
       );
     }
   }
 
-  selectElements(element: Elements): void {
-    this.selectedElements = element;
-  }
-
-  loadElementsData() {
-    this.apiService.getElements().subscribe({
-      next: (data) => {
-        this.elements = data;
-        console.log('Загружено:', data);
-      },
-      error: (err) => {
-        console.error('Ошибка загрузки данных:', err);
-      },
-    });
-  }
-
-  loadElementsMockData() {
-    this.elements = [...API_ELEMENTS_MOCK];
+  selectEquipment(equipment: StationEquipmentModel): void {
+    this.selectedEquipment = equipment;
   }
 
   getNextControlDate(
@@ -92,5 +90,14 @@ export class StationDetailsComponent implements OnInit {
     } else {
       return undefined;
     }
+  }
+
+  getSelectedElementActs(): EquipmentActModel[] {
+    if (this.selectedEquipment) {
+      return EQUIPMENT_ACTS_DATA_MOCK.filter(
+        (act) => act.equipmentId === this.selectedEquipment?.element_id,
+      );
+    }
+    return [];
   }
 }

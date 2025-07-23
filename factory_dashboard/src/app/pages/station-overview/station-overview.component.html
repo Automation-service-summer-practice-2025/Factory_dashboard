@@ -1,6 +1,6 @@
 <div *ngIf="station" class="page-container">
   <div class="header">
-    <span>Производство №1 > {{ station.station_name }}</span>
+    <span>Производство №1 > {{ station.name }}</span>
     <div class="header-button-group">
       <button>Тех. документация</button>
       <button>Импорт</button>
@@ -18,30 +18,33 @@
     </thead>
     <tbody>
       <tr
-        *ngFor="let element of paginatedItems"
-        (click)="goToElementDetails(element.element_id)"
+        *ngFor="let equipment of paginatedEquipments"
+        (click)="goToElementDetails(equipment.element_id)"
       >
         <td class="working-status-col">
           <label class="status-toggle">
             <input
               type="checkbox"
-              [checked]="element.working_status"
+              [checked]="equipment.working_status"
               disabled
             />
             <span class="slider"></span>
           </label>
         </td>
         <td class="name-col">
-          {{ element.element_name }}
+          {{ equipment.element_name }}
         </td>
         <td class="block-key-status-col">
-          <span class="status-badge" [class.enabled]="element.block_key_status">
-            {{ element.block_key_status ? "Выкл" : "Вкл" }}
+          <span
+            class="status-badge"
+            [class.enabled]="equipment.block_key_status"
+          >
+            {{ equipment.block_key_status ? "Выкл" : "Вкл" }}
           </span>
         </td>
         <td class="checking-date-col">
-          {{ element.checking_date_start | date: "dd.MM.yyyy" }} -
-          {{ element.checking_date_finish | date: "dd.MM.yyyy" }}
+          {{ equipment.checking_date_start | date: "dd.MM.yyyy" }} -
+          {{ equipment.checking_date_end | date: "dd.MM.yyyy" }}
         </td>
       </tr>
     </tbody>

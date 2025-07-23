@@ -1,6 +1,7 @@
-export interface Documents {
+export interface EquipmentActModel {
   id: number;
-  documentName: string;
+  equipmentId: number;
+  name: string;
   repairType: string;
   plannedStartDate: Date;
   actualStartDate: Date | null;
