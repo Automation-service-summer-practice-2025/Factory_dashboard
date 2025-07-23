@@ -32,5 +32,5 @@ export interface StationEquipmentModel {
   working_status: boolean;
   checking_date_start: string;
   checking_date_end: string;
-  tab_id: "SBPS" | "DZ" | "UnK";
+  tab_id: 'SBPS' | 'DZ' | 'UnK';
 }
