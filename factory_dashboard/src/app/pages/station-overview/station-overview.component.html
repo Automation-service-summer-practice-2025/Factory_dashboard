@@ -25,7 +25,7 @@
           <label class="status-toggle">
             <input
               type="checkbox"
-              [checked]="equipment.params.working_status"
+              [checked]="equipment.working_status"
               disabled
             />
             <span class="slider"></span>
@@ -37,7 +37,7 @@
         <td class="block-key-status-col">
           <span
             class="status-badge"
-            [class.enabled]="equipment.params.block_key_status"
+            [class.enabled]="equipment.block_key_status"
           >
             {{ equipment.block_key_status ? "Выкл" : "Вкл" }}
           </span>
