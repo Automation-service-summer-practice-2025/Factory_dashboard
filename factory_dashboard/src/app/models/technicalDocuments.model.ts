@@ -1,5 +1,5 @@
 export interface TechnicalDocuments {
-    id: number
-    name: string,
-    fileName: string
+  id: number;
+  name: string;
+  fileName: string;
 }

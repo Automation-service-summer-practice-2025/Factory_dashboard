@@ -14,7 +14,7 @@ import { TECHNICAL_DOCUMENTS_MOCK } from '../../../mocks/TechnicalDocuments.mock
   templateUrl: './tech-dock.component.html',
   styleUrl: './tech-dock.component.css',
 })
-export class TechDockComponent implements OnInit{
+export class TechDockComponent implements OnInit {
   technicalDocuments: TechnicalDocuments[] = [];
 
   selectedDocument: string = '';
@@ -30,7 +30,9 @@ export class TechDockComponent implements OnInit{
     const documentId = Number(selectElement.value);
 
     if (documentId) {
-      const selectedDoc = this.technicalDocuments.find((doc) => doc.id === documentId);
+      const selectedDoc = this.technicalDocuments.find(
+        (doc) => doc.id === documentId,
+      );
       if (selectedDoc) {
         this.downloadFile(selectedDoc.fileName);
       }
