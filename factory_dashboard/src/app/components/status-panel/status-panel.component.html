@@ -25,14 +25,14 @@
   <div class="panel-title">{{ status.title }}</div>
   <div class="panel-row">
     <span>Не квитировано</span>
-    <span class="panel-num highlight">{{ status.notAck }}</span>
+    <span class="panel-num highlight">{{ status.numUnquotedEvents }}</span>
   </div>
   <div class="panel-row">
     <span>Квитировано</span>
-    <span class="panel-num">{{ status.ack }}</span>
+    <span class="panel-num">{{ status.numQuotedEvents }}</span>
   </div>
   <div class="panel-row">
     <span>Диагностика</span>
-    <span class="panel-num">{{ status.diag }}</span>
+    <span class="panel-num">{{ status.numDiagnosticEvents }}</span>
   </div>
 </div>

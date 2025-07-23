@@ -1,22 +1,22 @@
-import { StatusData } from '../models/status.model';
+import { StatusPanelData } from '../models/status-panel.model';
 
-export const STATUS_INFO_MOCK: StatusData[] = [
+export const STATUS_INFO_MOCK: StatusPanelData[] = [
   {
     title: 'Загазованность',
-    notAck: 2,
-    ack: 0,
-    diag: 0,
+    numUnquotedEvents: 2,
+    numQuotedEvents: 0,
+    numDiagnosticEvents: 0,
   },
   {
     title: 'Деблокировочные ключи',
-    notAck: 483,
-    ack: 0,
-    diag: 0,
+    numUnquotedEvents: 483,
+    numQuotedEvents: 0,
+    numDiagnosticEvents: 0,
   },
   {
     title: 'Блокировки и сигнализация',
-    notAck: 19,
-    ack: 0,
-    diag: 0,
+    numUnquotedEvents: 19,
+    numQuotedEvents: 0,
+    numDiagnosticEvents: 0,
   },
 ];
