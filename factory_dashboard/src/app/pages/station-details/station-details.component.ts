@@ -10,8 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
-import { STATION_EQUIPMENT_DATA_MOCK } from '../../mocks/EquipmentData.mock';
+import { STATION_EQUIPMENTS_DATA_MOCK } from '../../mocks/StationEquipmentsData.mock';
 import { StationEquipmentModel } from '../../models/factory.model';
+import { EquipmentActModel } from '../../models/equipment-act.model';
+import { EQUIPMENT_ACTS_DATA_MOCK } from '../../mocks/EquipmentActsData.mock';
 
 @Component({
   standalone: true,
@@ -56,7 +58,7 @@ export class StationDetailsComponent implements OnInit {
   }
 
   loadElementsMockData(stationId: number): void {
-    this.stationEquipment = STATION_EQUIPMENT_DATA_MOCK.filter(
+    this.stationEquipment = STATION_EQUIPMENTS_DATA_MOCK.filter(
       (equipment) => equipment.station_id === stationId,
     );
   }
@@ -88,5 +90,14 @@ export class StationDetailsComponent implements OnInit {
     } else {
       return undefined;
     }
+  }
+
+  getSelectedElementActs(): EquipmentActModel[] {
+    if (this.selectedEquipment) {
+      return EQUIPMENT_ACTS_DATA_MOCK.filter(
+        (act) => act.equipmentId === this.selectedEquipment?.element_id,
+      );
+    }
+    return [];
   }
 }

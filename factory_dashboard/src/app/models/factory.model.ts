@@ -1,5 +1,3 @@
-import { Acts } from './documents.model';
-
 export interface TooltipData {
   station_name: string;
   description?: string;
@@ -32,7 +30,6 @@ export interface StationEquipmentModel {
   range_measurement: string;
   block_key_status: boolean;
   working_status: boolean;
-  acts?: Acts[];
   checking_date_start: string;
   checking_date_end: string;
 }

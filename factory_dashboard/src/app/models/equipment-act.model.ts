@@ -1,5 +1,6 @@
-export interface Acts {
+export interface EquipmentActModel {
   id: number;
+  equipmentId: number;
   name: string;
   repairType: string;
   plannedStartDate: Date;

@@ -7,7 +7,7 @@ import {
   StationEquipmentModel,
 } from '../../models/factory.model';
 import { STATIONS_DATA_MOCK } from '../../mocks/StationsData.mock';
-import { STATION_EQUIPMENT_DATA_MOCK } from '../../mocks/EquipmentData.mock';
+import { STATION_EQUIPMENTS_DATA_MOCK } from '../../mocks/StationEquipmentsData.mock';
 
 @Component({
   selector: 'app-station-overview',
@@ -35,7 +35,7 @@ export class StationOverviewComponent implements OnInit {
     this.station =
       STATIONS_DATA_MOCK.find((station) => station.id === stationId) || null;
 
-    this.stationEquipment = STATION_EQUIPMENT_DATA_MOCK.filter(
+    this.stationEquipment = STATION_EQUIPMENTS_DATA_MOCK.filter(
       (equipment) => equipment.station_id === stationId,
     );
   }
