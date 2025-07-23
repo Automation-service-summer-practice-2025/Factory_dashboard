@@ -5,7 +5,7 @@
     (change)="onDocumentChange($event)"
   >
     <option value="" hidden selected>Тех. документация</option>
-    <option *ngFor="let doc of documents" [value]="doc.id">
+    <option *ngFor="let doc of technicalDocuments" [value]="doc.id">
       {{ doc.name }}
     </option>
   </select>
