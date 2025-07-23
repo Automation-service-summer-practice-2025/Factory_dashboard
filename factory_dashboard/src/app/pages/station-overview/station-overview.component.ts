@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { APIService } from '../../services/api.service';
 import { Station } from '../../models/station.model';
 import { CommonModule } from '@angular/common';
 
@@ -17,7 +16,6 @@ export class StationOverviewComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private apiService: APIService,
     private router: Router,
   ) {}
 
@@ -25,17 +23,6 @@ export class StationOverviewComponent implements OnInit {
     const stationId = Number(this.route.snapshot.paramMap.get('station_id'));
     // this.loadStationData(stationId);
     this.loadStationMockData(stationId);
-  }
-
-  loadStationData(stationId: number) {
-    this.apiService.getStationById(stationId).subscribe({
-      next: (data) => {
-        this.station = data;
-      },
-      error: (err) => {
-        console.error('Ошибка загрузки данных установки:', err);
-      },
-    });
   }
 
   loadStationMockData(stationId: number) {

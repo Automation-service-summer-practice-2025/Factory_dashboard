@@ -1,7 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import ImageMap from 'image-map';
-import { APIService } from '../../services/api.service';
 import { MapArea, TooltipData, Position } from '../../models/factory.model';
 import { MAP_AREAS_MOCK } from '../../mocks/MapArea.mock';
 
@@ -23,21 +22,7 @@ export class FactoryMap {
     ImageMap('img[usemap]');
   }
 
-  constructor(private apiService: APIService) {}
-
   mapAreas!: MapArea[];
-
-  loadMapData() {
-    this.apiService.getStations().subscribe({
-      next: (data) => {
-        this.mapAreas = data;
-        console.log('Загружено:', data);
-      },
-      error: (err) => {
-        console.error('Ошибка загрузки данных установки:', err);
-      },
-    });
-  }
 
   loadMapMockData() {
     this.mapAreas = [...MAP_AREAS_MOCK];

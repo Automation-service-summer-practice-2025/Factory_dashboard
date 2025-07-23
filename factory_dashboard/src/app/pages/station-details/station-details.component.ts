@@ -8,7 +8,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
-import { APIService } from '../../services/api.service';
 import { API_ELEMENTS_MOCK } from '../../mocks/Elements.mock';
 import { Elements } from '../../models/elements.model';
 
@@ -37,8 +36,6 @@ export class StationDetailsComponent implements OnInit {
   filteredElements: Elements[] = [];
   selectedElements: Elements | null = null;
 
-  constructor(private apiService: APIService) {}
-
   ngOnInit(): void {
     this.loadElementsMockData();
 
@@ -63,18 +60,6 @@ export class StationDetailsComponent implements OnInit {
 
   selectElements(element: Elements): void {
     this.selectedElements = element;
-  }
-
-  loadElementsData() {
-    this.apiService.getElements().subscribe({
-      next: (data) => {
-        this.elements = data;
-        console.log('Загружено:', data);
-      },
-      error: (err) => {
-        console.error('Ошибка загрузки данных:', err);
-      },
-    });
   }
 
   loadElementsMockData() {
