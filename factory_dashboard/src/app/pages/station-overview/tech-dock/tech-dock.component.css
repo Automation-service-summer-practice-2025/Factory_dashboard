@@ -1,0 +1,21 @@
+mat-form-field.mat-mdc-form-field {
+  --mdc-filled-text-field-container-color: #2196f3;
+  --mdc-filled-text-field-hover-container-color: #1e88e5;
+  --mdc-filled-text-field-focus-container-color: #1976d2;
+  --mdc-filled-text-field-label-text-color: white;
+  --mdc-filled-text-field-input-text-color: white;
+  width: 250px;
+  font-family: "Times New Roman", Times, serif !important;
+  font-size: 16px;
+}
+
+select {
+  color: white;
+  font-size: 16px;
+  height: 56px;
+  padding: 0 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+}
