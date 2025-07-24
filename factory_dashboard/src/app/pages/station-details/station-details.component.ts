@@ -44,11 +44,12 @@ export class StationDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const stationId = Number(this.route.snapshot.paramMap.get('station_id'));
+    const activeTab = String(this.route.snapshot.paramMap.get('tab_id'));
     const equipmentId = Number(
       this.route.snapshot.paramMap.get('equipment_id'),
     );
 
-    this.loadElementsMockData(stationId);
+    this.loadElementsMockData(stationId, activeTab);
 
     this.filteredElements = [...this.stationEquipment];
     this.selectedEquipment =
@@ -57,9 +58,9 @@ export class StationDetailsComponent implements OnInit {
       ) || null;
   }
 
-  loadElementsMockData(stationId: number): void {
+  loadElementsMockData(stationId: number, activeTab: string): void {
     this.stationEquipment = STATION_EQUIPMENTS_DATA_MOCK.filter(
-      (equipment) => equipment.station_id === stationId,
+      (equipment) => equipment.station_id === stationId && equipment.tab_id === activeTab
     );
   }
 

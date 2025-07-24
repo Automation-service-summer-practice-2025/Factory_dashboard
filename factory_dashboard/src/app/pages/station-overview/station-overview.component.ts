@@ -91,7 +91,7 @@ export class StationOverviewComponent implements OnInit {
   }
 
   goToElementDetails(equipmentId: number): void {
-    this.router.navigate([`/station/${this.station?.id}/${equipmentId}`]);
+    this.router.navigate([`/station/${this.station?.id}/${this.activeTab}/${equipmentId}`]);
   }
 
   switchTab(tabId: string) {
