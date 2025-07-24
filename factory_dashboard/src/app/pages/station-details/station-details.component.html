@@ -60,9 +60,11 @@
         <div class="info-grid">
           <div class="info-item">
             <span class="info-label">Статус:</span>
-            <span class="info-value">{{
-              selectedEquipment?.block_key_status
-            }}</span>
+            <span class="info-value">
+              {{
+                selectedEquipment?.block_key_status ? "Включено" : "Выключено"
+              }}
+            </span>
           </div>
 
           <div class="info-item">
