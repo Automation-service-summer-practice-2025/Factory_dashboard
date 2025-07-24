@@ -52,14 +52,13 @@ export class StationDetailsComponent implements OnInit {
 
     this.filteredElements = [...this.stationEquipment];
     this.selectedEquipment =
-      this.stationEquipment.find(
-        (equipment) => equipment.element_id === equipmentId,
-      ) || null;
+      this.stationEquipment.find((equipment) => equipment.id === equipmentId) ||
+      null;
   }
 
   loadElementsMockData(stationId: number): void {
     this.stationEquipment = STATION_EQUIPMENTS_DATA_MOCK.filter(
-      (equipment) => equipment.station_id === stationId,
+      (equipment) => equipment.stationId === stationId,
     );
   }
 
@@ -68,7 +67,7 @@ export class StationDetailsComponent implements OnInit {
       this.filteredElements = [...this.stationEquipment];
     } else {
       this.filteredElements = this.stationEquipment.filter((stationEquipment) =>
-        stationEquipment.element_name
+        stationEquipment.name
           .toLowerCase()
           .includes(this.searchTerm.toLowerCase()),
       );
@@ -95,7 +94,7 @@ export class StationDetailsComponent implements OnInit {
   getSelectedElementActs(): EquipmentActModel[] {
     if (this.selectedEquipment) {
       return EQUIPMENT_ACTS_DATA_MOCK.filter(
-        (act) => act.equipmentId === this.selectedEquipment?.element_id,
+        (act) => act.equipmentId === this.selectedEquipment?.id,
       );
     }
     return [];

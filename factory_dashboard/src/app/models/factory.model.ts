@@ -17,20 +17,20 @@ export interface StationModel {
 }
 
 export interface StationEquipmentModel {
-  element_id: number;
-  element_name: string;
-  station_id: number;
+  id: number;
+  name: string;
+  stationId: number;
   manufacturer: string;
   passport: number;
   factory: number;
   certificate: string;
-  interval_check: number;
-  last_metrological_control: Date;
-  last_check: Date;
-  range_measurement: string;
-  block_key_status: boolean;
-  working_status: boolean;
-  checking_date_start: string;
-  checking_date_end: string;
-  tab_id: 'SBPS' | 'DZ' | 'UnK';
+  intervalCheck: number;
+  lastMetrologicalControl: Date;
+  lastCheck: Date;
+  rangeMeasurement: string;
+  blockKeyStatus: boolean;
+  workingStatus: boolean;
+  checkingDateStart: string;
+  checkingDateEnd: string;
+  tabType: 'SBPS' | 'DZ' | 'UnK';
 }

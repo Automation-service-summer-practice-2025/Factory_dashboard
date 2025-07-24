@@ -30,32 +30,29 @@
     <tbody>
       <tr
         *ngFor="let equipment of paginatedEquipments"
-        (click)="goToElementDetails(equipment.element_id)"
+        (click)="goToElementDetails(equipment.id)"
       >
         <td class="working-status-col">
           <label class="status-toggle">
             <input
               type="checkbox"
-              [checked]="equipment.working_status"
+              [checked]="equipment.workingStatus"
               disabled
             />
             <span class="slider"></span>
           </label>
         </td>
         <td class="name-col">
-          {{ equipment.element_name }}
+          {{ equipment.name }}
         </td>
         <td class="block-key-status-col">
-          <span
-            class="status-badge"
-            [class.enabled]="equipment.block_key_status"
-          >
-            {{ equipment.block_key_status ? "Вкл" : "Выкл" }}
+          <span class="status-badge" [class.enabled]="equipment.blockKeyStatus">
+            {{ equipment.blockKeyStatus ? "Вкл" : "Выкл" }}
           </span>
         </td>
         <td class="checking-date-col">
-          {{ equipment.checking_date_start | date: "dd.MM.yyyy" }} -
-          {{ equipment.checking_date_end | date: "dd.MM.yyyy" }}
+          {{ equipment.checkingDateStart | date: "dd.MM.yyyy" }} -
+          {{ equipment.checkingDateEnd | date: "dd.MM.yyyy" }}
         </td>
       </tr>
     </tbody>
