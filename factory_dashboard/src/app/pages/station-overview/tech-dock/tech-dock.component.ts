@@ -82,7 +82,7 @@ export class TechDockComponent implements OnInit {
       this.filteredDocuments = [];
     } else {
       this.filteredDocuments = this.technicalDocuments.filter(
-        doc => doc.tabType === this.activeTab
+        (doc) => doc.tabType === this.activeTab,
       );
     }
   }
