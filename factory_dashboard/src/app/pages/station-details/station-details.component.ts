@@ -14,6 +14,7 @@ import { STATION_EQUIPMENTS_DATA_MOCK } from '../../mocks/StationEquipmentsData.
 import { StationEquipmentModel } from '../../models/factory.model';
 import { EquipmentActModel } from '../../models/act.model';
 import { EQUIPMENT_ACTS_DATA_MOCK } from '../../mocks/EquipmentActsData.mock';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   standalone: true,
@@ -27,7 +28,7 @@ import { EQUIPMENT_ACTS_DATA_MOCK } from '../../mocks/EquipmentActsData.mock';
     MatButtonModule,
     FormsModule,
     DatePipe,
-    CommonModule,
+    CommonModule
   ],
   templateUrl: './station-details.component.html',
   styleUrl: './station-details.component.css',
@@ -43,6 +44,7 @@ export class StationDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    private http: HttpClient
   ) {}
 
   ngOnInit(): void {
@@ -106,5 +108,27 @@ export class StationDetailsComponent implements OnInit {
       );
     }
     return [];
+  }
+
+  public downloadAct(fileName: string): void {
+    const fileUrl = `assets/tech-documents/${fileName}`;
+
+    this.http.get(fileUrl, { responseType: 'blob' }).subscribe({
+      next: (blob: Blob) => {
+        const url = window.URL.createObjectURL(blob);
+        const createdElement = document.createElement('a');
+
+        createdElement.href = url;
+        createdElement.download = fileName;
+        document.body.appendChild(createdElement);
+        createdElement.click();
+
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(createdElement);
+      },
+      error: (error) => {
+        console.error('Ошибка при скачивании файла:', error);
+      },
+    });
   }
 }

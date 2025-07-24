@@ -10,6 +10,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'
   },
   {
     id: 1012,
@@ -20,6 +21,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-07-25T12:04:53'),
     plannedEndDate: new Date('2025-07-26T09:00:00'),
     actualEndDate: new Date('2025-07-25T12:41:20'),
+    fileName: 'act1.pdf'
   },
   {
     id: 1021,
@@ -30,6 +32,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'
   },
   {
     id: 1022,
@@ -40,6 +43,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-07-25T12:04:53'),
     plannedEndDate: new Date('2025-07-26T09:00:00'),
     actualEndDate: new Date('2025-07-25T12:41:20'),
+    fileName: 'act1.pdf'
   },
   {
     id: 1023,
@@ -50,6 +54,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-07-25T12:04:53'),
     plannedEndDate: new Date('2025-07-26T09:00:00'),
     actualEndDate: new Date('2025-07-25T12:41:20'),
+    fileName: 'act1.pdf'
   },
   {
     id: 1031,
@@ -60,6 +65,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'
   },
   {
     id: 1032,
@@ -70,6 +76,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'
   },
   {
     id: 1033,
@@ -80,6 +87,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-07-25T12:04:53'),
     plannedEndDate: new Date('2025-07-26T09:00:00'),
     actualEndDate: new Date('2025-07-25T12:41:20'),
+    fileName: 'act1.pdf'
   },
   {
     id: 1034,
@@ -90,6 +98,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-07-25T12:04:53'),
     plannedEndDate: new Date('2025-07-26T09:00:00'),
     actualEndDate: new Date('2025-07-25T12:41:20'),
+    fileName: 'act1.pdf'
   },
   {
     id: 2011,
@@ -100,6 +109,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'
   },
   {
     id: 2012,
@@ -110,6 +120,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-07-25T12:04:53'),
     plannedEndDate: new Date('2025-07-26T09:00:00'),
     actualEndDate: new Date('2025-07-25T12:41:20'),
+    fileName: 'act1.pdf'
   },
   {
     id: 2021,
@@ -120,6 +131,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'
   },
   {
     id: 2031,
@@ -130,6 +142,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'
   },
   {
     id: 2032,
@@ -140,6 +153,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'
   },
   {
     id: 2033,
@@ -150,6 +164,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-07-25T12:04:53'),
     plannedEndDate: new Date('2025-07-26T09:00:00'),
     actualEndDate: new Date('2025-07-25T12:41:20'),
+    fileName: 'act1.pdf'
   },
   {
     id: 2034,
@@ -160,6 +175,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-07-25T12:04:53'),
     plannedEndDate: new Date('2025-07-26T09:00:00'),
     actualEndDate: new Date('2025-07-25T12:41:20'),
+    fileName: 'act1.pdf'
   },
   {
     id: 2035,
@@ -170,6 +186,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'
   },
   {
     id: 2036,
@@ -180,6 +197,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-07-25T12:04:53'),
     plannedEndDate: new Date('2025-07-26T09:00:00'),
     actualEndDate: new Date('2025-07-25T12:41:20'),
+    fileName: 'act1.pdf'
   },
   {
     id: 2037,
@@ -190,6 +208,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-07-25T12:04:53'),
     plannedEndDate: new Date('2025-07-26T09:00:00'),
     actualEndDate: new Date('2025-07-25T12:41:20'),
+    fileName: 'act1.pdf'
   },
   {
     id: 3011,
@@ -200,6 +219,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'
   },
   {
     id: 3012,
@@ -210,6 +230,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'  
   },
   {
     id: 3021,
@@ -220,6 +241,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'
   },
   {
     id: 3031,
@@ -230,6 +252,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'
   },
   {
     id: 3032,
@@ -240,6 +263,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'
   },
   {
     id: 3033,
@@ -250,6 +274,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-07-25T12:04:53'),
     plannedEndDate: new Date('2025-07-26T09:00:00'),
     actualEndDate: new Date('2025-07-25T12:41:20'),
+    fileName: 'act1.pdf'
   },
   {
     id: 3034,
@@ -260,6 +285,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-07-25T12:04:53'),
     plannedEndDate: new Date('2025-07-26T09:00:00'),
     actualEndDate: new Date('2025-07-25T12:41:20'),
+    fileName: 'act1.pdf'
   },
   {
     id: 3035,
@@ -270,6 +296,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-01-21T07:51:56'),
     plannedEndDate: new Date('2025-01-24T17:00:00'),
     actualEndDate: new Date('2025-01-21T08:28:43'),
+    fileName: 'act1.pdf'
   },
   {
     id: 3036,
@@ -280,6 +307,7 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-07-25T12:04:53'),
     plannedEndDate: new Date('2025-07-26T09:00:00'),
     actualEndDate: new Date('2025-07-25T12:41:20'),
+    fileName: 'act1.pdf'
   },
   {
     id: 3037,
@@ -290,5 +318,6 @@ export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
     actualStartDate: new Date('2025-07-25T12:04:53'),
     plannedEndDate: new Date('2025-07-26T09:00:00'),
     actualEndDate: new Date('2025-07-25T12:41:20'),
+    fileName: 'act1.pdf'
   },
 ];
