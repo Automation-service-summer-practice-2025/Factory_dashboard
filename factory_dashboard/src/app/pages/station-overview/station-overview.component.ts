@@ -21,6 +21,12 @@ export class StationOverviewComponent implements OnInit {
   stationEquipment: StationEquipmentModel[] = [];
   currentPage = 1;
   itemsPerPage = 10;
+  activeTab: string = 'SBPS';
+  tabs = [
+    { id: 'SBPS', name: 'СБиПАЗ' },
+    { id: 'DZ', name: 'ДЗ' },
+    { id: 'UnK', name: 'Деблокир. ключи' },
+  ];
 
   constructor(
     private route: ActivatedRoute,
@@ -87,14 +93,6 @@ export class StationOverviewComponent implements OnInit {
   goToElementDetails(equipmentId: number): void {
     this.router.navigate([`/station/${this.station?.id}/${equipmentId}`]);
   }
-
-  activeTab: string = 'SBPS';
-
-  tabs = [
-    { id: 'SBPS', name: 'СБиПАЗ' },
-    { id: 'DZ', name: 'ДЗ' },
-    { id: 'UnK', name: 'Деблокир. ключи' },
-  ];
 
   switchTab(tabId: string) {
     this.activeTab = tabId;
