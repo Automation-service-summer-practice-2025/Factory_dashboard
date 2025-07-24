@@ -64,7 +64,8 @@
     <span
       *ngFor="let page of getPages()"
       [class.active]="page === currentPage"
-      (click)="goToPage(page)"
+      [class.dots]="page === '...'"
+      (click)="page !== '...' && goToPage(page)"
     >
       {{ page }}
     </span>
