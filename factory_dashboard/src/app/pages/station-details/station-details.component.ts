@@ -28,7 +28,7 @@ import { HttpClient } from '@angular/common/http';
     MatButtonModule,
     FormsModule,
     DatePipe,
-    CommonModule
+    CommonModule,
   ],
   templateUrl: './station-details.component.html',
   styleUrl: './station-details.component.css',
@@ -44,7 +44,7 @@ export class StationDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private http: HttpClient
+    private http: HttpClient,
   ) {}
 
   ngOnInit(): void {
@@ -111,7 +111,7 @@ export class StationDetailsComponent implements OnInit {
   }
 
   public downloadAct(fileName: string): void {
-    const fileUrl = `assets/tech-documents/${fileName}`;
+    const fileUrl = `assets/acts/${fileName}`;
 
     this.http.get(fileUrl, { responseType: 'blob' }).subscribe({
       next: (blob: Blob) => {
