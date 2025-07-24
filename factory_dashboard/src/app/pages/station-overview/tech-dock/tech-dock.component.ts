@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TechnicalDocuments } from '../../../models/technicalDocuments.model';
 import { TECHNICAL_DOCUMENTS_MOCK } from '../../../mocks/TechnicalDocuments.mock';
-import { MatIconModule } from '@angular/material/icon'; // Добавлен импорт для иконки
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   standalone: true,
