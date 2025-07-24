@@ -4,7 +4,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { TechnicalDocuments } from '../../../models/technicalDocuments.model';
+import { TechnicalDocuments } from '../../../models/documents.model';
 import { TECHNICAL_DOCUMENTS_MOCK } from '../../../mocks/TechnicalDocuments.mock';
 import { MatIconModule } from '@angular/material/icon';
 
