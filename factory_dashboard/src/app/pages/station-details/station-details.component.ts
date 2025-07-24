@@ -62,6 +62,25 @@ export class StationDetailsComponent implements OnInit {
       null;
   }
 
+  ngAfterViewInit(): void {
+    const equipmentId = Number(
+      this.route.snapshot.paramMap.get('equipment_id'),
+    );
+    this.scrollToItem(`${equipmentId}`);
+  }
+
+  scrollToItem(equipmentId: string) {
+    setTimeout(() => {
+      const element = document.getElementById(equipmentId);
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        });
+      }
+    });
+  }
+
   loadElementsMockData(stationId: number, activeTab: string): void {
     this.stationEquipment = STATION_EQUIPMENTS_DATA_MOCK.filter(
       (equipment) =>
