@@ -66,11 +66,54 @@ export class StationOverviewComponent implements OnInit {
     );
   }
 
-  getPages(): number[] {
-    const pages = [];
-    for (let i = 1; i <= this.totalPages; i++) {
-      pages.push(i);
+  getPages(): (number | string)[] {
+    const total = this.totalPages;
+    const current = this.currentPage;
+
+    const edgeCount = 5;
+    const aroundCurrent = 3;
+
+    const pages: (number | string)[] = [];
+
+    if (total <= edgeCount * 2 + aroundCurrent * 2) {
+      for (let i = 1; i <= total; i++) {
+        pages.push(i);
+      }
+      return pages;
     }
+
+    const addPage = (val: number | string) => {
+      if (pages.length === 0 || pages[pages.length - 1] !== val) {
+        pages.push(val);
+      }
+    };
+
+    // 1. Начальные страницы
+    for (let i = 1; i <= edgeCount; i++) {
+      addPage(i);
+    }
+
+    // 2. Средние страницы
+    const startMiddle = Math.max(current - aroundCurrent, edgeCount + 1);
+    const endMiddle = Math.min(current + aroundCurrent, total - edgeCount);
+
+    if (startMiddle > edgeCount + 1) {
+      addPage('...');
+    }
+
+    for (let i = startMiddle; i <= endMiddle; i++) {
+      addPage(i);
+    }
+
+    if (endMiddle < total - edgeCount) {
+      addPage('...');
+    }
+
+    // 3. Конечные страницы
+    for (let i = total - edgeCount + 1; i <= total; i++) {
+      addPage(i);
+    }
+
     return pages;
   }
 
@@ -80,8 +123,10 @@ export class StationOverviewComponent implements OnInit {
     }
   }
 
-  goToPage(page: number): void {
-    this.currentPage = page;
+  goToPage(page: string | number): void {
+    if (typeof page === 'number') {
+      this.currentPage = page;
+    }
   }
 
   nextPage(): void {

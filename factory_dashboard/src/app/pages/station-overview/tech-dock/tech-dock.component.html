@@ -1,13 +1,21 @@
-<mat-form-field appearance="fill">
-  <select
-    matNativeControl
-    [(ngModel)]="selectedDocument"
-    (change)="onDocumentChange($event)"
+<div class="custom-select-button">
+  <button
+    class="header-button"
+    (click)="toggleDropdown()"
     [disabled]="activeTab === 'UnK'"
   >
-    <option value="" hidden selected>Тех. документация</option>
-    <option *ngFor="let doc of filteredDocuments" [value]="doc.id">
+    Тех. документация
+    <mat-icon>arrow_drop_down</mat-icon>
+  </button>
+  <div
+    class="dropdown-content"
+    *ngIf="showDropdown && filteredDocuments.length > 0"
+  >
+    <div
+      *ngFor="let doc of filteredDocuments"
+      (click)="onDocumentSelect(doc.id)"
+    >
       {{ doc.name }}
-    </option>
-  </select>
-</mat-form-field>
+    </div>
+  </div>
+</div>
