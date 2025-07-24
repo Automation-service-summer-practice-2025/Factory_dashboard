@@ -3,8 +3,11 @@ import { CommonModule } from '@angular/common';
 import {
   STATUS_PANEL_DATA_MOCK,
   WEATHER_DATA_MOCK,
-} from '../../mocks/StatusPanelData.mock';
-import { WeatherData, StatusPanelData } from '../../models/status-panel.model';
+} from '../../../mocks/StatusPanelData.mock';
+import {
+  WeatherData,
+  StatusPanelData,
+} from '../../../models/status-panel.model';
 
 @Component({
   selector: 'app-status-panel',
