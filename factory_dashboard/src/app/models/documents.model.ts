@@ -7,6 +7,7 @@ export interface EquipmentActModel {
   actualStartDate: Date | null;
   plannedEndDate: Date;
   actualEndDate: Date | null;
+  fileName: string;
 }
 
 export interface TechnicalDocuments {
