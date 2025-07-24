@@ -1,21 +1,47 @@
-mat-form-field.mat-mdc-form-field {
-  --mdc-filled-text-field-container-color: #2196f3;
-  --mdc-filled-text-field-hover-container-color: #1e88e5;
-  --mdc-filled-text-field-focus-container-color: #1976d2;
-  --mdc-filled-text-field-label-text-color: white;
-  --mdc-filled-text-field-input-text-color: white;
-  width: 250px;
-  font-family: "Times New Roman", Times, serif !important;
-  font-size: 16px;
+.custom-select-button {
+  position: relative;
+  display: inline-block;
 }
 
-select {
+.header-button {
+  background-color: #2196f3;
   color: white;
-  font-size: 16px;
-  height: 56px;
-  padding: 0 10px;
-  background-color: transparent;
   border: none;
-  outline: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 30px;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.header-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
   width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdown-content div {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #333;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.dropdown-content div:hover {
+  background-color: #f1f1f1;
 }
