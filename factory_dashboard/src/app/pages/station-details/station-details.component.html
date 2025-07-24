@@ -25,14 +25,14 @@
       <mat-list-item
         *ngFor="let position of filteredElements"
         (click)="selectEquipment(position)"
-        [class.active]="position.element_id === selectedEquipment?.element_id"
+        [class.active]="position.id === selectedEquipment?.id"
       >
         <div
           class="position-indicator"
-          [class.deblock-on]="position?.block_key_status"
-          [class.deblock-off]="!position?.block_key_status"
+          [class.deblock-on]="position?.blockKeyStatus"
+          [class.deblock-off]="!position?.blockKeyStatus"
         ></div>
-        {{ position.element_name }}
+        {{ position.name }}
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
@@ -42,7 +42,7 @@
     <!-- Здесь будет основной контент экрана с деталями позиции -->
     <div *ngIf="selectEquipment" class="position-details">
       <div class="header-section">
-        <h2>Технологический № {{ selectedEquipment?.element_name }}</h2>
+        <h2>Технологический № {{ selectedEquipment?.name }}</h2>
 
         <div class="header-actions">
           <button mat-raised-button color="primary" class="action-button">
@@ -62,7 +62,7 @@
             <span class="info-label">Статус:</span>
             <span class="info-value">
               {{
-                selectedEquipment?.block_key_status ? "Включено" : "Выключено"
+                selectedEquipment?.blockKeyStatus ? "Включено" : "Выключено"
               }}
             </span>
           </div>
@@ -70,7 +70,7 @@
           <div class="info-item">
             <span class="info-label">Последний контроль:</span>
             <span class="info-value">{{
-              selectedEquipment?.last_metrological_control | date: "dd.MM.yyyy"
+              selectedEquipment?.lastMetrologicalControl | date: "dd.MM.yyyy"
             }}</span>
           </div>
 
@@ -78,8 +78,8 @@
             <span class="info-label">Следующий контроль:</span>
             <span class="info-value">{{
               getNextControlDate(
-                selectedEquipment?.last_metrological_control,
-                selectedEquipment?.interval_check
+                selectedEquipment?.lastMetrologicalControl,
+                selectedEquipment?.intervalCheck
               ) | date: "dd.MM.yyyy"
             }}</span>
           </div>
@@ -87,7 +87,7 @@
           <div class="info-item">
             <span class="info-label">Последняя проверка:</span>
             <span class="info-value">{{
-              selectedEquipment?.last_check | date: "dd.MM.yyyy"
+              selectedEquipment?.lastCheck | date: "dd.MM.yyyy"
             }}</span>
           </div>
         </div>
@@ -141,7 +141,7 @@
           <div class="passport-item">
             <span class="passport-label">Межповерочный интервал:</span>
             <span class="passport-value">{{
-              selectedEquipment?.interval_check
+              selectedEquipment?.intervalCheck
             }}</span>
           </div>
 
@@ -150,7 +150,7 @@
               >Диапазон измерений НКПР компонента:</span
             >
             <span class="passport-value">{{
-              selectedEquipment?.range_measurement
+              selectedEquipment?.rangeMeasurement
             }}</span>
           </div>
         </div>

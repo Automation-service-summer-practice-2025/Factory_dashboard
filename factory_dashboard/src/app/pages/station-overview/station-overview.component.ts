@@ -47,8 +47,8 @@ export class StationOverviewComponent implements OnInit {
   filterEquipmentByTab(stationId: number) {
     this.stationEquipment = STATION_EQUIPMENTS_DATA_MOCK.filter((equipment) => {
       return (
-        equipment.station_id === stationId &&
-        equipment.tab_id === this.activeTab
+        equipment.stationId === stationId &&
+        equipment.tabType === this.activeTab
       );
     });
     this.currentPage = 1;
