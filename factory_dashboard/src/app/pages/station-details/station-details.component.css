@@ -244,6 +244,10 @@ mat-list-item.active .position-indicator {
   left: -1px;
 }
 
+mat-list-item.active {
+  background-color: #e3e3e3;;
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
   .position-indicator {
