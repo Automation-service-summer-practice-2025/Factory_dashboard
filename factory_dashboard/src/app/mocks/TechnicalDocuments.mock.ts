@@ -1,4 +1,4 @@
-import { TechnicalDocuments } from '../models/technicalDocuments.model';
+import { TechnicalDocuments } from '../models/documents.model';
 
 export const TECHNICAL_DOCUMENTS_MOCK: TechnicalDocuments[] = [
   {

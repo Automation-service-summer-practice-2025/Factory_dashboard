@@ -12,7 +12,7 @@ import { DatePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { STATION_EQUIPMENTS_DATA_MOCK } from '../../mocks/StationEquipmentsData.mock';
 import { StationEquipmentModel } from '../../models/factory.model';
-import { EquipmentActModel } from '../../models/act.model';
+import { EquipmentActModel } from '../../models/documents.model';
 import { EQUIPMENT_ACTS_DATA_MOCK } from '../../mocks/EquipmentActsData.mock';
 import { HttpClient } from '@angular/common/http';
 
