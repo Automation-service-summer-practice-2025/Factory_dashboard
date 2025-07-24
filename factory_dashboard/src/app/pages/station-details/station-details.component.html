@@ -24,6 +24,7 @@
     <mat-nav-list>
       <mat-list-item
         *ngFor="let position of filteredElements"
+        [id]="position.id"
         (click)="selectEquipment(position)"
         [class.active]="position.id === selectedEquipment?.id"
       >
