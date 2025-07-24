@@ -166,7 +166,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 304,
     element_name: 'Реле Р-10',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'АО ЭнергоКонтроль',
     passport: 7000133321,
     factory: 87141,
@@ -184,7 +184,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 305,
     element_name: 'Реле Р-12',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ЗАО РелеСтандарт',
     passport: 7000133322,
     factory: 87142,
@@ -202,7 +202,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 306,
     element_name: 'Реле Р-16',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ООО ЭлектроТех',
     passport: 7000133327,
     factory: 87143,
@@ -220,7 +220,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 307,
     element_name: 'Трансформатор Т-5',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'АО ЭнергоТех',
     passport: 7000133328,
     factory: 87144,
@@ -238,7 +238,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 308,
     element_name: 'Трансформатор Т-6',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ЗАО ЭлектроСила',
     passport: 7000133329,
     factory: 87145,
@@ -256,7 +256,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 309,
     element_name: 'Выключатель В-7',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'АО ЭнергоКонтроль',
     passport: 7000133330,
     factory: 87146,
@@ -274,7 +274,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 310,
     element_name: 'Выключатель В-8',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ООО ЭлектроТех',
     passport: 7000133331,
     factory: 87147,
@@ -292,7 +292,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 311,
     element_name: 'Реле Р-20',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ЗАО РелеСтандарт',
     passport: 7000133332,
     factory: 87148,
@@ -310,7 +310,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 312,
     element_name: 'Трансформатор Т-9',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'АО ЭнергоКонтроль',
     passport: 7000133333,
     factory: 87149,
@@ -328,7 +328,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 313,
     element_name: 'Трансформатор Т-10',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ООО ЭлектроТех',
     passport: 7000133334,
     factory: 87150,
@@ -346,7 +346,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 351,
     element_name: 'Датчик Д-1',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'АО ЭнергоТех',
     passport: 7000133351,
     factory: 87201,
@@ -364,7 +364,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 352,
     element_name: 'Датчик Д-2',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ЗАО ЭлектроСила',
     passport: 7000133352,
     factory: 87202,
@@ -382,7 +382,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 353,
     element_name: 'Датчик Д-3',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ООО ЭлектроТех',
     passport: 7000133353,
     factory: 87203,
@@ -400,7 +400,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 354,
     element_name: 'Датчик Д-4',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'АО ЭнергоКонтроль',
     passport: 7000133354,
     factory: 87204,
@@ -418,7 +418,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 355,
     element_name: 'Датчик Д-5',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ЗАО РелеСтандарт',
     passport: 7000133355,
     factory: 87205,
@@ -436,7 +436,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 401,
     element_name: 'Газоанализатор ГА-101',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'АО ГазКонтроль',
     passport: 7000133401,
     factory: 87301,
@@ -454,7 +454,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 402,
     element_name: 'Сигнализатор СГ-202',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ООО ГазТех',
     passport: 7000133402,
     factory: 87302,
@@ -472,7 +472,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 403,
     element_name: 'Датчик ДК-303',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ЗАО СенсорГаз',
     passport: 7000133403,
     factory: 87303,
@@ -490,7 +490,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 404,
     element_name: 'Анализатор АГ-404',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'АО ЭнергоГаз',
     passport: 7000133404,
     factory: 87304,
@@ -508,7 +508,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 405,
     element_name: 'Контроллер КГ-505',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ООО ГазАналит',
     passport: 7000133405,
     factory: 87305,
@@ -526,7 +526,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 406,
     element_name: 'Датчик ДГ-606',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'АО ГазКонтроль',
     passport: 7000133406,
     factory: 87306,
@@ -544,7 +544,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 407,
     element_name: 'Измеритель ИГ-707',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ЗАО СенсорГаз',
     passport: 7000133407,
     factory: 87307,
@@ -562,7 +562,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 408,
     element_name: 'Сигнализатор СД-808',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ООО ГазТех',
     passport: 7000133408,
     factory: 87308,
@@ -580,7 +580,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 409,
     element_name: 'Анализатор АД-909',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'АО ЭнергоГаз',
     passport: 7000133409,
     factory: 87309,
@@ -598,7 +598,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 410,
     element_name: 'Контроллер КД-1010',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ООО ГазАналит',
     passport: 7000133410,
     factory: 87310,
@@ -616,7 +616,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 451,
     element_name: 'Датчик ДГ-501',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'АО ГазКонтроль',
     passport: 7000133451,
     factory: 87401,
@@ -634,7 +634,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 452,
     element_name: 'Измеритель ИГ-502',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ЗАО СенсорГаз',
     passport: 7000133452,
     factory: 87402,
@@ -652,7 +652,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 453,
     element_name: 'Сигнализатор СД-503',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ООО ГазТех',
     passport: 7000133453,
     factory: 87403,
@@ -670,7 +670,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 454,
     element_name: 'Анализатор АД-504',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'АО ЭнергоГаз',
     passport: 7000133454,
     factory: 87404,
@@ -688,7 +688,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 455,
     element_name: 'Контроллер КД-505',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ООО ГазАналит',
     passport: 7000133455,
     factory: 87405,
@@ -706,7 +706,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 456,
     element_name: 'Датчик ДГ-606',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'АО ГазКонтроль',
     passport: 7000133456,
     factory: 87406,
@@ -724,7 +724,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 457,
     element_name: 'Измеритель ИГ-707',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ЗАО СенсорГаз',
     passport: 7000133457,
     factory: 87407,
@@ -742,7 +742,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 458,
     element_name: 'Сигнализатор СД-808',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ООО ГазТех',
     passport: 7000133458,
     factory: 87408,
@@ -760,7 +760,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 459,
     element_name: 'Анализатор АД-909',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'АО ЭнергоГаз',
     passport: 7000133459,
     factory: 87409,
@@ -778,7 +778,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
   {
     element_id: 460,
     element_name: 'Контроллер КД-1010',
-    station_id: 19,
+    station_id: 2,
     manufacturer: 'ООО ГазАналит',
     passport: 7000133460,
     factory: 87410,
