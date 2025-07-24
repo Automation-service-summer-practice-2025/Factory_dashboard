@@ -5,8 +5,8 @@ import {
   StationModel,
   TooltipData,
   Position,
-} from '../../models/factory.model';
-import { STATIONS_DATA_MOCK } from '../../mocks/StationsData.mock';
+} from '../../../models/factory.model';
+import { STATIONS_DATA_MOCK } from '../../../mocks/StationsData.mock';
 
 @Component({
   selector: 'app-factory-map',
