@@ -17,6 +17,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
     working_status: true,
     checking_date_start: '2024-01-15T00:00:00',
     checking_date_end: '2024-01-20T00:00:00',
+    tab_id: 'SBPS',
   },
   {
     element_id: 102,
@@ -34,6 +35,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
     working_status: true,
     checking_date_start: '2024-01-15T00:00:00',
     checking_date_end: '2024-01-20T00:00:00',
+    tab_id: 'DZ',
   },
   {
     element_id: 103,
@@ -51,6 +53,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
     working_status: false,
     checking_date_start: '2024-01-15T00:00:00',
     checking_date_end: '2024-01-20T00:00:00',
+    tab_id: 'UnK',
   },
   {
     element_id: 201,
@@ -68,6 +71,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
     working_status: true,
     checking_date_start: '2024-01-15T00:00:00',
     checking_date_end: '2024-01-20T00:00:00',
+    tab_id: 'DZ',
   },
   {
     element_id: 202,
@@ -85,6 +89,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
     working_status: true,
     checking_date_start: '2024-01-15T00:00:00',
     checking_date_end: '2024-01-20T00:00:00',
+    tab_id: 'SBPS',
   },
   {
     element_id: 203,
@@ -102,6 +107,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
     working_status: false,
     checking_date_start: '2024-01-15T00:00:00',
     checking_date_end: '2024-01-20T00:00:00',
+    tab_id: 'UnK',
   },
   {
     element_id: 301,
@@ -119,6 +125,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
     working_status: true,
     checking_date_start: '2024-01-15T00:00:00',
     checking_date_end: '2024-01-20T00:00:00',
+    tab_id: 'SBPS',
   },
   {
     element_id: 302,
@@ -136,6 +143,7 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
     working_status: true,
     checking_date_start: '2024-01-15T00:00:00',
     checking_date_end: '2024-01-20T00:00:00',
+    tab_id: 'DZ',
   },
   {
     element_id: 303,
@@ -153,5 +161,6 @@ export const STATION_EQUIPMENTS_DATA_MOCK: StationEquipmentModel[] = [
     working_status: false,
     checking_date_start: '2024-01-15T00:00:00',
     checking_date_end: '2024-01-20T00:00:00',
+    tab_id: 'UnK',
   },
 ];

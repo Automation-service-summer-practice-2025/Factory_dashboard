@@ -1,6 +1,17 @@
 <div *ngIf="station" class="page-container">
   <div class="header">
     <span>Производство №1 > {{ station.name }}</span>
+
+    <div class="header-button-group">
+      <button
+        *ngFor="let tab of tabs"
+        [class.active]="activeTab === tab.id"
+        (click)="switchTab(tab.id)"
+      >
+        {{ tab.name }}
+      </button>
+    </div>
+
     <div class="header-button-group">
       <app-tech-dock></app-tech-dock>
       <button>Импорт</button>

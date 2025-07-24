@@ -21,6 +21,12 @@ export class StationOverviewComponent implements OnInit {
   stationEquipment: StationEquipmentModel[] = [];
   currentPage = 1;
   itemsPerPage = 10;
+  activeTab: string = 'SBPS';
+  tabs = [
+    { id: 'SBPS', name: 'СБиПАЗ' },
+    { id: 'DZ', name: 'ДЗ' },
+    { id: 'UnK', name: 'Деблокир. ключи' },
+  ];
 
   constructor(
     private route: ActivatedRoute,
@@ -35,10 +41,17 @@ export class StationOverviewComponent implements OnInit {
   loadMockData(stationId: number) {
     this.station =
       STATIONS_DATA_MOCK.find((station) => station.id === stationId) || null;
+    this.filterEquipmentByTab(stationId);
+  }
 
-    this.stationEquipment = STATION_EQUIPMENTS_DATA_MOCK.filter(
-      (equipment) => equipment.station_id === stationId,
-    );
+  filterEquipmentByTab(stationId: number) {
+    this.stationEquipment = STATION_EQUIPMENTS_DATA_MOCK.filter((equipment) => {
+      return (
+        equipment.station_id === stationId &&
+        equipment.tab_id === this.activeTab
+      );
+    });
+    this.currentPage = 1;
   }
 
   get totalPages(): number {
@@ -79,5 +92,11 @@ export class StationOverviewComponent implements OnInit {
 
   goToElementDetails(equipmentId: number): void {
     this.router.navigate([`/station/${this.station?.id}/${equipmentId}`]);
+  }
+
+  switchTab(tabId: string) {
+    this.activeTab = tabId;
+    const stationId = Number(this.route.snapshot.paramMap.get('station_id'));
+    this.filterEquipmentByTab(stationId);
   }
 }
