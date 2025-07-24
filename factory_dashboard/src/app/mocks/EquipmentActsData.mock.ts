@@ -1,4 +1,4 @@
-import { EquipmentActModel } from '../models/act.model';
+import { EquipmentActModel } from '../models/documents.model';
 
 export const EQUIPMENT_ACTS_DATA_MOCK: EquipmentActModel[] = [
   {

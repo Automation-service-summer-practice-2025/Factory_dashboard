@@ -8,3 +8,10 @@ export interface EquipmentActModel {
   plannedEndDate: Date;
   actualEndDate: Date | null;
 }
+
+export interface TechnicalDocuments {
+  id: number;
+  name: string;
+  fileName: string;
+  tabType: 'SBPS' | 'DZ' | 'UnK';
+}
