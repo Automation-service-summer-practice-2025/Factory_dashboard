@@ -73,7 +73,7 @@ export class StationDetailsComponent implements OnInit {
       if (element) {
         element.scrollIntoView({
           behavior: 'smooth',
-          block: 'center'
+          block: 'center',
         });
       }
     });
