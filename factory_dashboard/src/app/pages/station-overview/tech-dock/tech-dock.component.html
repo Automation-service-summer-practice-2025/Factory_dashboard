@@ -1,15 +1,18 @@
 <div class="custom-select-button">
-  <button 
-    class="header-button" 
+  <button
+    class="header-button"
     (click)="toggleDropdown()"
     [disabled]="activeTab === 'UnK'"
   >
     Тех. документация
     <mat-icon>arrow_drop_down</mat-icon>
   </button>
-  <div class="dropdown-content" *ngIf="showDropdown && filteredDocuments.length > 0">
-    <div 
-      *ngFor="let doc of filteredDocuments" 
+  <div
+    class="dropdown-content"
+    *ngIf="showDropdown && filteredDocuments.length > 0"
+  >
+    <div
+      *ngFor="let doc of filteredDocuments"
       (click)="onDocumentSelect(doc.id)"
     >
       {{ doc.name }}

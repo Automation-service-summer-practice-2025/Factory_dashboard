@@ -11,7 +11,13 @@ import { MatIconModule } from '@angular/material/icon'; // Добавлен им
 @Component({
   standalone: true,
   selector: 'app-tech-dock',
-  imports: [CommonModule, MatFormFieldModule, MatInputModule, FormsModule, MatIconModule], // Добавлен MatIconModule
+  imports: [
+    CommonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatIconModule,
+  ],
   templateUrl: './tech-dock.component.html',
   styleUrl: './tech-dock.component.css',
 })
@@ -20,7 +26,7 @@ export class TechDockComponent implements OnInit {
   @Input() activeTab: string = 'SBPS';
   filteredDocuments: TechnicalDocuments[] = [];
   selectedDocument: string = '';
-  showDropdown: boolean = false; // Добавлено свойство для управления видимостью dropdown
+  showDropdown: boolean = false;
 
   constructor(private http: HttpClient) {}
 
@@ -32,7 +38,7 @@ export class TechDockComponent implements OnInit {
     this.showDropdown = !this.showDropdown;
   }
 
-  onDocumentSelect(documentId: number): void { // Изменен метод для работы с documentId
+  onDocumentSelect(documentId: number): void {
     if (documentId) {
       const selectedDoc = this.technicalDocuments.find(
         (doc) => doc.id === documentId,
@@ -41,7 +47,7 @@ export class TechDockComponent implements OnInit {
         this.downloadFile(selectedDoc.fileName);
       }
       this.selectedDocument = '';
-      this.showDropdown = false; // Закрываем dropdown после выбора
+      this.showDropdown = false;
     }
   }
 
