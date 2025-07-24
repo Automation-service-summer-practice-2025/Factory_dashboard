@@ -126,6 +126,11 @@
   border-radius: 5px;
 }
 
+.pagination span.dots {
+  pointer-events: none;
+  cursor: default;
+}
+
 .status-toggle {
   position: relative;
   display: inline-block;
