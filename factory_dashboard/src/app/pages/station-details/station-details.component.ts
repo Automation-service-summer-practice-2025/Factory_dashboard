@@ -6,7 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
@@ -40,7 +40,7 @@ export class StationDetailsComponent implements OnInit {
   filteredElements: StationEquipmentModel[] = [];
   selectedEquipment: StationEquipmentModel | null = null;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     const stationId = Number(this.route.snapshot.paramMap.get('station_id'));
@@ -77,6 +77,9 @@ export class StationDetailsComponent implements OnInit {
   }
 
   selectEquipment(equipment: StationEquipmentModel): void {
+    this.router.navigate(['../', equipment.element_id], {
+      relativeTo: this.route,
+    });
     this.selectedEquipment = equipment;
   }
 
