@@ -40,7 +40,10 @@ export class StationDetailsComponent implements OnInit {
   filteredElements: StationEquipmentModel[] = [];
   selectedEquipment: StationEquipmentModel | null = null;
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+  ) {}
 
   ngOnInit(): void {
     const stationId = Number(this.route.snapshot.paramMap.get('station_id'));
@@ -60,7 +63,8 @@ export class StationDetailsComponent implements OnInit {
 
   loadElementsMockData(stationId: number, activeTab: string): void {
     this.stationEquipment = STATION_EQUIPMENTS_DATA_MOCK.filter(
-      (equipment) => equipment.station_id === stationId && equipment.tab_id === activeTab
+      (equipment) =>
+        equipment.station_id === stationId && equipment.tab_id === activeTab,
     );
   }
 
