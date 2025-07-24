@@ -6,21 +6,21 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TechnicalDocuments } from '../../../models/technicalDocuments.model';
 import { TECHNICAL_DOCUMENTS_MOCK } from '../../../mocks/TechnicalDocuments.mock';
+import { MatIconModule } from '@angular/material/icon'; // Добавлен импорт для иконки
 
 @Component({
   standalone: true,
   selector: 'app-tech-dock',
-  imports: [CommonModule, MatFormFieldModule, MatInputModule, FormsModule],
+  imports: [CommonModule, MatFormFieldModule, MatInputModule, FormsModule, MatIconModule], // Добавлен MatIconModule
   templateUrl: './tech-dock.component.html',
   styleUrl: './tech-dock.component.css',
 })
 export class TechDockComponent implements OnInit {
   technicalDocuments: TechnicalDocuments[] = [];
-
   @Input() activeTab: string = 'SBPS';
   filteredDocuments: TechnicalDocuments[] = [];
-
   selectedDocument: string = '';
+  showDropdown: boolean = false; // Добавлено свойство для управления видимостью dropdown
 
   constructor(private http: HttpClient) {}
 
@@ -28,10 +28,11 @@ export class TechDockComponent implements OnInit {
     this.loadTechnicalDocumentMockData();
   }
 
-  onDocumentChange(event: Event): void {
-    const selectElement = event.target as HTMLSelectElement;
-    const documentId = Number(selectElement.value);
+  toggleDropdown(): void {
+    this.showDropdown = !this.showDropdown;
+  }
 
+  onDocumentSelect(documentId: number): void { // Изменен метод для работы с documentId
     if (documentId) {
       const selectedDoc = this.technicalDocuments.find(
         (doc) => doc.id === documentId,
@@ -40,7 +41,7 @@ export class TechDockComponent implements OnInit {
         this.downloadFile(selectedDoc.fileName);
       }
       this.selectedDocument = '';
-      selectElement.value = '';
+      this.showDropdown = false; // Закрываем dropdown после выбора
     }
   }
 
