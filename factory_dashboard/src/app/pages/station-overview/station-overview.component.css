@@ -190,9 +190,9 @@ input:disabled + .slider {
 }
 
 .status-badge.enabled {
-  background-color: #f44336;
+  background-color: #4caf50;
 }
 
 .status-badge:not(.enabled) {
-  background-color: #4caf50;
+  background-color: #f44336;
 }
