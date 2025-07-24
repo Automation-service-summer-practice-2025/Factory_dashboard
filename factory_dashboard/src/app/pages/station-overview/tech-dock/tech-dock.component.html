@@ -3,9 +3,10 @@
     matNativeControl
     [(ngModel)]="selectedDocument"
     (change)="onDocumentChange($event)"
+    [disabled]="activeTab === 'UnK'"
   >
     <option value="" hidden selected>Тех. документация</option>
-    <option *ngFor="let doc of technicalDocuments" [value]="doc.id">
+    <option *ngFor="let doc of filteredDocuments" [value]="doc.id">
       {{ doc.name }}
     </option>
   </select>

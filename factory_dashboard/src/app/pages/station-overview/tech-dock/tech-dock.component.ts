@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -16,6 +16,9 @@ import { TECHNICAL_DOCUMENTS_MOCK } from '../../../mocks/TechnicalDocuments.mock
 })
 export class TechDockComponent implements OnInit {
   technicalDocuments: TechnicalDocuments[] = [];
+
+  @Input() activeTab: string = 'SBPS';
+  filteredDocuments: TechnicalDocuments[] = [];
 
   selectedDocument: string = '';
 
@@ -65,5 +68,22 @@ export class TechDockComponent implements OnInit {
 
   loadTechnicalDocumentMockData() {
     this.technicalDocuments = [...TECHNICAL_DOCUMENTS_MOCK];
+    this.filterDocuments();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['activeTab']) {
+      this.filterDocuments();
+    }
+  }
+
+  private filterDocuments(): void {
+    if (this.activeTab === 'UnK') {
+      this.filteredDocuments = [];
+    } else {
+      this.filteredDocuments = this.technicalDocuments.filter(
+        doc => doc.tabType === this.activeTab
+      );
+    }
   }
 }
