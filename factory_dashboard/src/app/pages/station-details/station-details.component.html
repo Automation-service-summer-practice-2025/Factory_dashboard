@@ -167,7 +167,11 @@
             <div class="acts-column">Дата окончания</div>
           </div>
 
-          <div class="acts-row" *ngFor="let act of getSelectedElementActs()">
+          <div
+            class="acts-row"
+            (click)="downloadAct(act.fileName)"
+            *ngFor="let act of getSelectedElementActs()"
+          >
             <div class="acts-cell">{{ act.name }}</div>
             <div class="acts-cell">{{ act.repairType }}</div>
 

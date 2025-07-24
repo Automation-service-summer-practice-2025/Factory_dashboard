@@ -152,12 +152,23 @@
   display: table-row;
 }
 
-.acts-column,
+.acts-row:hover {
+  background-color: #eeeeee;
+}
+
+.acts-column {
+  display: table-cell;
+  padding: 12px;
+  border: 1px solid #ddd;
+  vertical-align: middle;
+}
+
 .acts-cell {
   display: table-cell;
   padding: 12px;
   border: 1px solid #ddd;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .acts-header .acts-column {
