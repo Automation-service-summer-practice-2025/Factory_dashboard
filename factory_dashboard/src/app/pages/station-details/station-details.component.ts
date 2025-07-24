@@ -63,7 +63,7 @@ export class StationDetailsComponent implements OnInit {
   loadElementsMockData(stationId: number, activeTab: string): void {
     this.stationEquipment = STATION_EQUIPMENTS_DATA_MOCK.filter(
       (equipment) =>
-        equipment.id === stationId && equipment.tabType === activeTab,
+        equipment.stationId === stationId && equipment.tabType === activeTab,
     );
   }
 
