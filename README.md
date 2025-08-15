@@ -8,20 +8,21 @@
 
 ### 1. Клонирование репозитория
 
-'''
+```bash
 git clone <ваш-репозиторий>
 cd factory_dashboard
-'''
+```
 
 ### 2. Сборка и запуск контейнера
 
-'''
+```bash
 docker-compose up -d --build
-'''
+```
+
 Приложение будет доступно по адресу: http://localhost:8080
 
 ### 3. Остановка приложения
 
-'''
+```bash
 docker-compose down
-'''
+```
