@@ -9,7 +9,7 @@
 ### 1. Клонирование репозитория
 
 ```bash
-git clone <ваш-репозиторий>
+git clone https://github.com/Automation-service-summer-practice-2025/Factory_dashboard.git
 cd factory_dashboard
 ```
 
