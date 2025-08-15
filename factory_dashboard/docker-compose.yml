@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: .
+    ports:
+      - "8080:4200"
+    restart: unless-stopped
+    container_name: factory_dashboard
